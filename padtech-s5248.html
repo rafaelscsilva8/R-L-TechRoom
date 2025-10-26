@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>PADTECH S5248-24P — Guia Completo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Mini-curso e ficha técnica do switch PADTECH S5248-24P: especificações, configuração CLI/GUI, PoE, VLANs, SNMP, troubleshooting e curiosidades."/>
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <!-- Google Fonts & Icons (mesmo do template) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries & Bootstrap (usar as mesmas pastas do seu projeto) -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Pequenas customizações específicas desta página */
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+        .specs-table td, .specs-table th { vertical-align: middle; }
+        pre.config-snippet { background:#0b1220; color:#cfe8ff; padding:1rem; border-radius:6px; overflow:auto; }
+        .chip { display:inline-block; padding:.25rem .6rem; border-radius:999px; background:#eef6ff; color:#08306b; font-weight:600; margin-right:.4rem; }
+        .feature-grid .card { border-radius: 12px; box-shadow: 0 6px 20px rgba(2,16,33,.08); }
+    </style>
+</head>
+<body>
+    <!-- Navbar (copiado do template para manter coerência) -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <a href="about.html" class="nav-item nav-link">Sobre nós</a>
+                <a href="courses.html" class="nav-item nav-link">Imagens</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
+                        <a href="team.html" class="dropdown-item">Cisco Catalyst 2960</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Apresentação do produto -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7">
+                    <h5 class="text-primary text-uppercase mb-3">PADTECH — Switch Gerenciável</h5>
+                    <h1 class="display-5 mb-3">PADTECH S5248-24P</h1>
+                    <p class="lead mb-4">Switch Layer 3 compacto de acesso para redes empresariais e data centers de borda. 24 portas Gigabit (PoE+), 4x 10G SFP+ uplinks, inteligência para VLAN, QoS, roteamento estático e OSPF-lite.</p>
+
+                    <div class="mb-3">
+                        <span class="chip">24 x 1GbE (PoE+)</span>
+                        <span class="chip">4 x 10G SFP+</span>
+                        <span class="chip">Layer 3</span>
+                        <span class="chip">Stackable</span>
+                    </div>
+
+                    <a href="#especificacoes" class="btn btn-light py-3 px-4 me-2">Especificações</a>
+                    <a href="#configuracao" class="btn btn-primary py-3 px-4">Como configurar</a>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <!-- Substituir ./img/padtech-s5248-front.jpg pela imagem real do equipamento -->
+                    <img src="./img/padtech-s5248-front.jpg" alt="PADTECH S5248-24P - Frente" class="img-fluid rounded" style="max-height:320px; box-shadow: 0 12px 40px rgba(0,0,0,.25)">
+                    <p class="mt-2 text-white-50 small">Imagem ilustrativa — substitua pela foto real do dispositivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main class="container my-5">
+
+        <!-- Seção: O que é -->
+        <section id="o-que-e" class="mb-5">
+            <h2>O que é o PADTECH S5248-24P?</h2>
+            <p>O <strong>PADTECH S5248-24P</strong> é um switch de acesso gerenciável projetado para escritórios, salas de aulas, pequenas centrais de dados e POPs de provedores. Oferece recursos de camada 2 e camada 3 leve, suporte a PoE+ em 24 portas, uplinks 10G redundantes, e capacidades de monitoramento e gerenciamento via CLI, Web GUI e SNMP.</p>
+        </section>
+
+        <!-- Seção: Especificações técnicas -->
+        <section id="especificacoes" class="mb-5">
+            <h2>Especificações técnicas</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered specs-table">
+                    <tbody>
+                        <tr><th>Modelo</th><td>PADTECH S5248-24P</td></tr>
+                        <tr><th>Formato</th><td>1U rack-mount / montagem em rack 19"</td></tr>
+                        <tr><th>Portas de acesso</th><td>24 x 10/100/1000 RJ-45 (PoE+ 802.3at até 30W por porta)</td></tr>
+                        <tr><th>Uplinks</th><td>4 x 10G SFP+ (SFP+ optics compatíveis)</td></tr>
+                        <tr><th>Switching capacity</th><td>176 Gbps (full-duplex)</td></tr>
+                        <tr><th>Throughput</th><td>130 Mpps</td></tr>
+                        <tr><th>Tabela MAC</th><td>32K entradas</td></tr>
+                        <tr><th>VLANs</th><td>Suporte 4K VLANs, 802.1Q</td></tr>
+                        <tr><th>Layer 3</th><td>Roteamento estático, OSPF (opcional), VRFs (limitado)</td></tr>
+                        <tr><th>QoS</th><td>4 queues, policies por porta; CBWFQ e CoS/DSCP</td></tr>
+                        <tr><th>Segurança</th><td>ACLs L2/L3, 802.1X, Port Security, Storm Control</td></tr>
+                        <tr><th>Gerenciamento</th><td>CLI (SSH), Web GUI, SNMPv2/v3, NETCONF (parcial)</td></tr>
+                        <tr><th>Redundância</th><td>Spanning Tree (RSTP), VRRP-lite, Stack (via módulo opcional)</td></tr>
+                        <tr><th>Consumo PoE</th><td>Fonte integrada 480W (máx) - orçamento PoE dinâmico</td></tr>
+                        <tr><th>Temperatura operacional</th><td>0°C a 45°C</td></tr>
+                        <tr><th>Dimensões</th><td>440 x 220 x 44 mm (1U)</td></tr>
+                        <tr><th>Peso</th><td>~4.6 kg</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="small text-muted">Observação: alguns parâmetros (ex.: tabela MAC, throughput) variam conforme firmware.</p>
+        </section>
+
+        <!-- Seção: Portas, LEDs e Painel -->
+        <section id="hardware" class="mb-5">
+            <h2>Portas, LEDs e painel frontal</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <h5 class="mb-3">Front panel (exemplo)</h5>
+                        <ul>
+                            <li>Portas 1–24: 10/100/1000 with PoE+</li>
+                            <li>Portas 25–28: SFP+ 10G uplinks</li>
+                            <li>Console RJ-45 / MicroUSB para CLI local</li>
+                            <li>Botão Reset / Factory default</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3 text-center">
+                        <!-- Substituir por imagem real do painel frontal -->
+                        <img src="./img/padtech-front-panel.jpg" alt="Painel frontal - PADTECH S5248-24P" class="img-fluid" style="max-height:220px;">
+                        <p class="small mt-2 text-muted">Legenda: disposição das portas e LEDs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="mt-4">Significado rápido dos LEDs</h6>
+            <ul>
+                <li><strong>System (verde):</strong> ligado = OK; piscando = boot; vermelho = falha.</li>
+                <li><strong>Link/Act (verde):</strong> link físico e atividade de tráfego.</li>
+                <li><strong>PoE (âmbar):</strong> quando PoE ativo na porta; piscando = sobrecarga.</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Como configurar (GUI + CLI) -->
+        <section id="configuracao" class="mb-5">
+            <h2>Como configurar</h2>
+
+            <h5 class="mt-3">Acesso inicial</h5>
+            <ol>
+                <li>Conecte console RJ-45 (ou microUSB) ao computador. Terminal: 115200 8N1.</li>
+                <li>No CLI, faça login com credenciais default (admin/admin) — troque imediatamente a senha.</li>
+                <li>Alternativamente, conecte via cabo Ethernet a uma porta configurada para DHCP e acesse a Web GUI em http://<i>&lt;IP-do-switch&gt;</i>.</li>
+            </ol>
+
+            <h5 class="mt-3">Exemplo básico — configurar IP management (CLI)</h5>
+            <pre class="config-snippet">
+enable
+configure terminal
+
+! configurar uma interface de gerenciamento (SVI)
+interface vlan 1
+ description MANAGEMENT
+ ip address 192.168.10.2 255.255.255.0
+ no shutdown
+
+ip default-gateway 192.168.10.1
+
+! configurar senha e SSH
+username admin privilege 15 secret SeuAdminS3nh4
+ip ssh version 2
+ip domain-name empresa.local
+crypto key generate rsa modulus 2048
+
+write memory
+            </pre>
+
+            <h5 class="mt-3">Criar VLANs, atribuir portas e trunk (CLI)</h5>
+            <pre class="config-snippet">
+! criar VLANs
+configure terminal
+vlan 10
+ name ALUNOS
+vlan 20
+ name GESTAO
+
+! atribuir portas (acesso)
+interface ethernet 1/0/1
+ switchport mode access
+ switchport access vlan 10
+interface ethernet 1/0/2
+ switchport mode access
+ switchport access vlan 20
+
+! configurar trunk em uplink para core
+interface ethernet 1/0/25
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 1,10,20
+
+write memory
+            </pre>
+
+            <h5 class="mt-3">Exemplo de SVI e roteamento estático</h5>
+            <pre class="config-snippet">
+interface vlan 10
+ ip address 10.10.10.1 255.255.255.0
+ no shutdown
+
+interface vlan 20
+ ip address 10.10.20.1 255.255.255.0
+ no shutdown
+
+! rota padrão via roteador do core
+ip route 0.0.0.0 0.0.0.0 10.10.254.1
+
+write memory
+            </pre>
+
+            <h5 class="mt-3">Ativar SNMPv3 (exemplo)</h5>
+            <pre class="config-snippet">
+snmp-server group admin v3 priv
+snmp-server user monituser admin v3 auth sha AuthPass123 priv aes 128 PrivPass123
+! permitir apenas hosts de gerenciamento
+snmp-server host 192.168.10.100 informs version 3 monituser
+            </pre>
+
+            <h5 class="mt-3">Configurar PoE</h5>
+            <p>Por padrão o PoE é gerenciado globalmente. Exemplo de limitar PoE em uma porta:</p>
+            <pre class="config-snippet">
+interface ethernet 1/0/6
+ power inline static 15000  ! limita alimentação em mW (ex.: 15W)
+ power inline never       ! desliga PoE na porta
+            </pre>
+        </section>
+
+        <!-- Seção: Web GUI (resumo) -->
+        <section id="web-gui" class="mb-5">
+            <h2>Web GUI — passos rápidos</h2>
+            <ol>
+                <li>Acesse <code>http://192.168.10.2</code> (ou IP configurado) no browser.</li>
+                <li>Login com usuário admin (troque a senha ao primeiro login).</li>
+                <li>Navegue em <em>System &gt; Network &gt; Interfaces</em> para configurar SVI/IP.</li>
+                <li>Use a aba <em>Switching &gt; VLAN</em> para criar/atribuir VLANs.</li>
+                <li>Em <em>PoE</em> você ativa/desativa por porta e observa consumo total.</li>
+                <li>Em <em>Maintenance</em> realize backup de configuração, upgrade de firmware e logs.</li>
+            </ol>
+            <p class="small text-muted">A GUI é útil para administradores que preferem interface gráfica — para automações e deploys em massa, use CLI + scripts via Ansible (quando suportado).</p>
+        </section>
+
+        <!-- Seção: Segurança e boas práticas -->
+        <section id="seguranca" class="mb-5">
+            <h2>Segurança e boas práticas</h2>
+            <ul>
+                <li>Trocar senhas padrão imediatamente e usar SSH (disable Telnet).</li>
+                <li>Ativar SNMPv3 (não usar SNMPv1/2c em produção).</li>
+                <li>Configurar ACLs de gerenciamento (permitir somente subnets de NOC).</li>
+                <li>Habilitar 802.1X para autenticação de ponta quando aplicável.</li>
+                <li>Separar redes de convidados/IoT em VLANs distintas com ACLs restrictivas.</li>
+                <li>Manter firmware atualizado e ter plano de rollback.</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Atualização de firmware (procedimento) -->
+        <section id="firmware" class="mb-5">
+            <h2>Atualização de firmware — passo a passo</h2>
+            <ol>
+                <li>Verifique versão atual: <code>show version</code>.</li>
+                <li>Baixe o firmware autorizado da PADTECH para o modelo &amp; versão.</li>
+                <li>Faça backup: <code>copy running-config startup-config</code> e baixe um arquivo via SCP/TFTP.</li>
+                <li>Transfira o arquivo para o switch (SCP recomendado): <code>scp fw-s5248-v1.2.3.bin admin@192.168.10.2:/tmp</code>.</li>
+                <li>Instale e reinicie conforme guia do fabricante (ex.: <code>system upgrade /tmp/fw-s5248-v1.2.3.bin</code>).</li>
+                <li>Depois do reboot, verifique integridade e faça testes de conectividade.</li>
+            </ol>
+            <p class="small text-muted">IMPORTANTE: nunca atualizar firmware em horário de produção sem janela de manutenção e backup.</p>
+        </section>
+
+        <!-- Seção: Troubleshooting rápido -->
+        <section id="troubleshooting" class="mb-5">
+            <h2>Troubleshooting rápido</h2>
+            <ul>
+                <li><strong>Sem link na porta:</strong> testar cabo, auto-negociação (force 1000/full), verificar VLAN e PoE.</li>
+                <li><strong>Porta com PoE sem alimentar:</strong> verificar budget PoE, configuração power inline e listas de prioridades.</li>
+                <li><strong>Perda de pacotes:</strong> monitorar counters com <code>show interface counters</code>, checar duplex/mtu/errores CRC.</li>
+                <li><strong>Gerenciamento inacessível:</strong> checar IP management, ACLs e conectividade até gateway.</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Curiosidades e diferenças com switches enterprise conhecidos -->
+        <section id="curiosidades" class="mb-5">
+            <h2>Curiosidades</h2>
+            <p>Apesar de ser um equipamento de acesso, o S5248-24P busca conciliar custo-benefício com recursos de camada 3. Em comparação com linhas enterprise (ex.: Cisco Catalyst), ele costuma ter:</p>
+            <ul>
+                <li>Menor suporte a features avançadas (ex.: VXLAN completo, MPLS) — porém cobre o essencial para redes corporativas e campus.</li>
+                <li>Interface Web mais simples — útil para equipes menores.</li>
+                <li>Preço competitivo e opções de PoE para aplicações de câmeras e ponto de acesso sem fio.</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Recursos de aprendizagem (mini-curso) -->
+        <section id="mini-curso" class="mb-5">
+            <h2>Mini-curso: passos de aprendizagem (rápido)</h2>
+            <ol>
+                <li><strong>Dia 1:</strong> Conheça o hardware, LEDs e painel. Faça o inventário e tire fotos (para colar o QR).</li>
+                <li><strong>Dia 2:</strong> Acesso ao CLI e Web GUI; mudar senhas e configurar IP management.</li>
+                <li><strong>Dia 3:</strong> Criar VLANs, configurar portas access/trunk e validar conectividade.</li>
+                <li><strong>Dia 4:</strong> PoE: testar com APs e câmeras; monitorar consumo.</li>
+                <li><strong>Dia 5:</strong> SNMP + integração com NMS básico; gerar alertas e testar traps.</li>
+            </ol>
+        </section>
+
+        <!-- Seção: Downloads e snippets -->
+        <section id="downloads" class="mb-5">
+            <h2>Snippets / Downloads</h2>
+            <p>Coloque arquivos de configuração úteis junto ao QR (ex.: <code>startup-config.txt</code>, <code>topologia.pdf</code>). Exemplo de arquivo de configuração pronto (copiar/colar mas ajustar IPs):</p>
+            <pre class="config-snippet">
+! arquivo: padtech-base-config.txt
+hostname PADTECH-S5248-24P
+no ip http server
+ip ssh version 2
+username admin privilege 15 secret SuperSenhaSegura!
+vlan 10
+ name ALUNOS
+vlan 20
+ name GESTAO
+interface vlan 1
+ ip address 192.168.10.2 255.255.255.0
+ip default-gateway 192.168.10.1
+            </pre>
+            <p class="small text-muted">Salve esses snippets como arquivos .txt/.cfg e disponibilize junto ao produto para o técnico.</p>
+        </section>
+
+        <!-- Seção: QR Code e uso prático -->
+        <section id="qr" class="mb-5">
+            <h2>Como usar o QR Code no dispositivo</h2>
+            <ol>
+                <li>Gere um QR Code que aponte para a URL desta página (ex.: <code>https://suaempresa.com/equipamentos/padtech-s5248-24p</code>).</li>
+                <li>Imprima em etiqueta resistente (laminada) com identificação: modelo, hostname e contato do NOC.</li>
+                <li>Cole no chassi em local visível. Quando o técnico escanear, abrirá esta página com instruções / fotos / downloads.</li>
+                <li>Inclua também um pequeno campo de “última manutenção” na etiqueta para anotações manuais (data e responsável).</li>
+            </ol>
+            <div class="row gy-3">
+                <div class="col-sm-6">
+                    <!-- Placeholder para imagem do QR Code (substituir por QR gerado) -->
+                    <img src="./img/qr-placeholder.png" alt="QR placeholder" class="img-fluid rounded">
+                    <p class="small text-muted mt-2">Substitua por QR real apontando para esta página.</p>
+                </div>
+                <div class="col-sm-6">
+                    <p>Um QR pode apontar para uma URL curta (ex.: bit.ly/PDTS5248) ou direto. Recomenda-se usar URL com HTTPS e registrar redirecionamento caso a estrutura do site mude.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Referências e contatos -->
+        <section id="referencias" class="mb-5">
+            <h2>Referências e contato</h2>
+            <p>Documentação oficial do fabricante (PADTECH) — sempre consulte o manual do modelo para instruções específicas de segurança e firmware.</p>
+            <p class="small text-muted">Contato do suporte NOC: <strong>noc@suaempresa.com</strong> | Telefone: <strong>(11) 4000-0000</strong></p>
+        </section>
+
+    </main>
+
+    <!-- Footer simples -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-1">PADTECH S5248-24P — Guia Rápido e Mini-Curso</p>
+            <small>Desenvolvido para R&L Techroom — substitua dados e imagens pelo material oficial do seu parque de equipamentos.</small>
+        </div>
+    </footer>
+
+    <!-- JS (mesmos arquivos do template) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
