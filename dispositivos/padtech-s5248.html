@@ -15,10 +15,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries & Bootstrap (usar as mesmas pastas do seu projeto) -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
     <style>
         /* Pequenas customizações específicas desta página */
@@ -44,14 +44,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Início</a>
-                <a href="about.html" class="nav-item nav-link">Sobre nós</a>
-                <a href="courses.html" class="nav-item nav-link">Imagens</a>
+                <a href="..\index.html" class="nav-item nav-link">Início</a>
+                <a href="..\about.html" class="nav-item nav-link">Sobre nós</a>
+                <a href="..\courses.html" class="nav-item nav-link">Imagens</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
-                        <a href="team.html" class="dropdown-item">Cisco Catalyst 2960</a>
+                        <a href="../team.html" class="dropdown-item">Cisco Catalyst 2960</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contato</a>
@@ -80,8 +80,7 @@
                 </div>
                 <div class="col-lg-5 text-center">
                     <!-- Substituir ./img/padtech-s5248-front.jpg pela imagem real do equipamento -->
-                    <img src="./img/padtech-s5248-front.jpg" alt="PADTECH S5248-24P - Frente" class="img-fluid rounded" style="max-height:320px; box-shadow: 0 12px 40px rgba(0,0,0,.25)">
-                    <p class="mt-2 text-white-50 small">Imagem ilustrativa — substitua pela foto real do dispositivo.</p>
+                    <img src="..\img\padtech-s5248-front.jpg" alt="PADTECH S5248-24P - Frente" class="img-fluid rounded" style="max-height:320px; box-shadow: 0 12px 40px rgba(0,0,0,.25)">
                 </div>
             </div>
         </div>
@@ -143,7 +142,7 @@
                 <div class="col-md-6">
                     <div class="card p-3 text-center">
                         <!-- Substituir por imagem real do painel frontal -->
-                        <img src="./img/padtech-front-panel.jpg" alt="Painel frontal - PADTECH S5248-24P" class="img-fluid" style="max-height:220px;">
+                        <img src="../img/painel-frontal-s5248.jpg" alt="Painel frontal - PADTECH S5248-24P" class="img-fluid" style="max-height:300px;">
                         <p class="small mt-2 text-muted">Legenda: disposição das portas e LEDs.</p>
                     </div>
                 </div>
@@ -312,65 +311,11 @@ interface ethernet 1/0/6
             </ul>
         </section>
 
-        <!-- Seção: Recursos de aprendizagem (mini-curso) -->
-        <section id="mini-curso" class="mb-5">
-            <h2>Mini-curso: passos de aprendizagem (rápido)</h2>
-            <ol>
-                <li><strong>Dia 1:</strong> Conheça o hardware, LEDs e painel. Faça o inventário e tire fotos (para colar o QR).</li>
-                <li><strong>Dia 2:</strong> Acesso ao CLI e Web GUI; mudar senhas e configurar IP management.</li>
-                <li><strong>Dia 3:</strong> Criar VLANs, configurar portas access/trunk e validar conectividade.</li>
-                <li><strong>Dia 4:</strong> PoE: testar com APs e câmeras; monitorar consumo.</li>
-                <li><strong>Dia 5:</strong> SNMP + integração com NMS básico; gerar alertas e testar traps.</li>
-            </ol>
-        </section>
-
-        <!-- Seção: Downloads e snippets -->
-        <section id="downloads" class="mb-5">
-            <h2>Snippets / Downloads</h2>
-            <p>Coloque arquivos de configuração úteis junto ao QR (ex.: <code>startup-config.txt</code>, <code>topologia.pdf</code>). Exemplo de arquivo de configuração pronto (copiar/colar mas ajustar IPs):</p>
-            <pre class="config-snippet">
-! arquivo: padtech-base-config.txt
-hostname PADTECH-S5248-24P
-no ip http server
-ip ssh version 2
-username admin privilege 15 secret SuperSenhaSegura!
-vlan 10
- name ALUNOS
-vlan 20
- name GESTAO
-interface vlan 1
- ip address 192.168.10.2 255.255.255.0
-ip default-gateway 192.168.10.1
-            </pre>
-            <p class="small text-muted">Salve esses snippets como arquivos .txt/.cfg e disponibilize junto ao produto para o técnico.</p>
-        </section>
-
-        <!-- Seção: QR Code e uso prático -->
-        <section id="qr" class="mb-5">
-            <h2>Como usar o QR Code no dispositivo</h2>
-            <ol>
-                <li>Gere um QR Code que aponte para a URL desta página (ex.: <code>https://suaempresa.com/equipamentos/padtech-s5248-24p</code>).</li>
-                <li>Imprima em etiqueta resistente (laminada) com identificação: modelo, hostname e contato do NOC.</li>
-                <li>Cole no chassi em local visível. Quando o técnico escanear, abrirá esta página com instruções / fotos / downloads.</li>
-                <li>Inclua também um pequeno campo de “última manutenção” na etiqueta para anotações manuais (data e responsável).</li>
-            </ol>
-            <div class="row gy-3">
-                <div class="col-sm-6">
-                    <!-- Placeholder para imagem do QR Code (substituir por QR gerado) -->
-                    <img src="./img/qr-placeholder.png" alt="QR placeholder" class="img-fluid rounded">
-                    <p class="small text-muted mt-2">Substitua por QR real apontando para esta página.</p>
-                </div>
-                <div class="col-sm-6">
-                    <p>Um QR pode apontar para uma URL curta (ex.: bit.ly/PDTS5248) ou direto. Recomenda-se usar URL com HTTPS e registrar redirecionamento caso a estrutura do site mude.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Seção: Referências e contatos -->
         <section id="referencias" class="mb-5">
             <h2>Referências e contato</h2>
             <p>Documentação oficial do fabricante (PADTECH) — sempre consulte o manual do modelo para instruções específicas de segurança e firmware.</p>
-            <p class="small text-muted">Contato do suporte NOC: <strong>noc@suaempresa.com</strong> | Telefone: <strong>(11) 4000-0000</strong></p>
+            <p class="small text-muted">Contato para dúvidas: <strong>e200adm@cps.sp.gov.br</strong> | Telefone: <strong>(11) 1234-5678</strong></p>
         </section>
 
     </main>
@@ -378,8 +323,8 @@ ip default-gateway 192.168.10.1
     <!-- Footer simples -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p class="mb-1">PADTECH S5248-24P — Guia Rápido e Mini-Curso</p>
-            <small>Desenvolvido para R&L Techroom — substitua dados e imagens pelo material oficial do seu parque de equipamentos.</small>
+            <p class="mb-1">PADTECH S5248-24P — Guia Rápido e Mini-Curso de Telecomunicações</p>
+            <small>Desenvolvido para R&L Techroom como projeto de Conclusão de Curso a escola técnica ETEC TAKASHI MORITA📍</small>
         </div>
     </footer>
 
