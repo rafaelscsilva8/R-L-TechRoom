@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>PADTEC MDDC25042ST1 — Guia Simples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Guia simples e didático do Padtec MDDC25042ST1. Entenda o que é, como funciona e para que serve um módulo MUX/DEMUX DWDM."/>
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            /* Mantenha o background para seguir o padrão do site */
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        /* O dispositivo é passivo, então esta seção CLI será removida */
+        /* pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        } */
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item">PADTEC DCM17001</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">PADTEC MDDC25042ST1</h1>
+                <p class="lead">
+                    Um módulo óptico passivo que atua como Multiplexador e Demultiplexador DWDM, permitindo enviar vários canais de internet por uma única fibra.
+                </p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/mddc.jpg" class="img-fluid rounded shadow" alt="Foto profissional do Padtec MDDC25042ST1">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>O que é o PADTEC MDDC25042ST1?</h2>
+
+    <p>
+        Este módulo é um Multiplexador e Demultiplexador Óptico (MUX/DEMUX) passivo.
+        Ele é usado em redes de alta capacidade com tecnologia (Dense Wavelength Division Multiplexing).
+    </p>
+
+    <p>
+        Assim como o DCM, ele não é um switch, roteador, nem distribui internet. Ele é um dispositivo totalmente óptico.
+    </p>
+
+    <p>
+        Pense na fibra óptica como uma grande mangueira de água.
+        Normalmente, só um balde de água (um sinal de internet) passa por vez.
+    </p>
+
+    <p>
+        O MDDC25042ST1 permite que você use a fibra de forma muito mais eficiente:
+    </p>
+
+    <ul>
+        <li>O Multiplexador (MUX) é como um funil: ele recebe a água de vários baldes diferentes (cada um com uma cor diferente, que na fibra são os comprimentos de onda/canais C20, C26, etc.) e as junta para passar por uma única mangueira (a porta Line).</li>
+        <li>O Demultiplexador (DEMUX) é a torneira no outro lado: ele recebe a água combinada da mangueira única (Line) e a separa de volta em seus baldes de cores originais (os canais C20, C26) para que cheguem aos seus destinos.</li>
+    </ul>
+
+    <h4>Em uma frase simples:</h4>
+    <p>
+        <strong>Ele multiplica a capacidade da fibra óptica, permitindo que vários serviços de internet (até 4, 8 ou mais) viagem na mesma fibra, ao mesmo tempo.</strong>
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>Como ligar</h2>
+
+    <p>Por ser um dispositivo totalmente passivo:</p>
+
+    <ul>
+        <li>✔ Não tem energia elétrica</li>
+        <li>✔ Não tem botão</li>
+        <li>✔ Não tem configuração</li>
+        <li>✔ Basta plugar as fibras</li>
+    </ul>
+
+    <h4>Como usar na prática:</h4>
+
+    <ol>
+        <li>Lado de Envio (MUX): Conecte os sinais individuais (de roteadores, switches, etc.) nas portas de canal (C20, C26, C30, C32). O sinal combinado (todos juntos) sai pela porta OUT Line em direção à fibra de longa distância.</li>
+        <li>Lado de Recebimento (DEMUX): Conecte a fibra de longa distância que está chegando na porta IN Line. Os sinais (C20, C26, C30, C32) já separados para cada destino saem nas portas de canal do lado do Demultiplexer.</li>
+    </ol>
+
+    <p>O monitoramento (portas MON) é usado para medir o sinal sem interromper o tráfego.</p>
+</section>
+
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                O MDDC25042ST1 é um:
+                <div class="quiz-option">A) Switch de borda</div>
+                <div class="quiz-option">B) Módulo Óptico Passivo MUX/DEMUX</div>
+                <div class="quiz-option">C) Amplificador de potência</div>
+            </li>
+
+            <li class="mb-3">
+                Qual a função principal deste equipamento?
+                <div class="quiz-option">A) Aumentar a segurança da rede</div>
+                <div class="quiz-option">B) Combinar e separar vários sinais em uma única fibra</div>
+                <div class="quiz-option">C) Roteamento de tráfego IP</div>
+            </li>
+
+            <li class="mb-3">
+                Por que ele é chamado de "passivo"?
+                <div class="quiz-option">A) Porque só funciona à noite</div>
+                <div class="quiz-option">B) Porque não precisa de energia elétrica para funcionar</div>
+                <div class="quiz-option">C) Porque tem poucas portas</div>
+            </li>
+
+            <li class="mb-3">
+                As portas C20, C26, C30 e C32 representam o quê?
+                <div class="quiz-option">A) Os IPs de gerenciamento</div>
+                <div class="quiz-option">B) Os diferentes canais (comprimentos de onda) de luz</div>
+                <div class="quiz-option">C) Os tipos de cabo de rede (RJ45)</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — PADTEC MDDC25042ST1</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

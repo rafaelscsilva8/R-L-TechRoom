@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>PADTEC MPM 48/48-3 — Main Power Module</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do PADTEC MPM 48/48-3. Explicação completa, simples e para leigos, seguindo o mesmo padrão dos outros dispositivos." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <!-- Google Fonts (mesmas das outras páginas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap e CSS principal -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item">PADTEC DCM17001</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">PADTEC MPM 48/48-3</h1>
+                <p class="lead">Módulo de potência responsável pela alimentação principal de equipamentos Padtec.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/mpm.jpg" class="img-fluid rounded shadow" alt="Padtec MPM 48/48-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>O que é o PADTEC MPM 48/48-3?</h2>
+    <p>
+        O <strong>MPM 48/48-3</strong> (Main Power Module) é um <strong>módulo de alimentação principal</strong>. Ele recebe energia externa — geralmente <strong>-48V</strong>, padrão em telecom — e distribui essa energia para os equipamentos instalados no chassi.
+    </p>
+
+    <p>
+        Imagine que o chassi é uma casa cheia de aparelhos, e o MPM é o "relógio de luz" que recebe a energia da rua e distribui para todos os cômodos.
+    </p>
+
+    <p>
+        Ele recebe energia de duas fontes: <strong>Source A</strong> e <strong>Source B</strong>. Isso garante que, se uma fonte falhar, a outra mantém tudo funcionando — como um gerador de reserva.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>Funções principais</h2>
+
+    <ul>
+        <li>Recebe energia externa de -48V;</li>
+        <li>Distribui energia para todos os módulos do chassi;</li>
+        <li>Possui duas fontes independentes (A e B) para redundância;</li>
+        <li>Indica falhas e funcionamento através de LEDs.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Como ligar</h2>
+
+    <ol>
+        <li>Conecte a energia -48V no bloco de terminais (marcado como 48V);</li>
+        <li>Conecte o retorno/terra conforme indicado (EARTH);</li>
+        <li>Ligue as chaves <strong>Source A</strong> e <strong>Source B</strong> para ativar cada entrada de energia;</li>
+        <li>Verifique se os LEDs <strong>POWER</strong>, <strong>SOURCE A</strong> e <strong>SOURCE B</strong> acendem corretamente.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>O que significam os LEDs?</h2>
+
+    <ul>
+        <li><strong>POWER</strong> — indica que o módulo está energizado;</li>
+        <li><strong>SOURCE A</strong> — energia presente na fonte A;</li>
+        <li><strong>SOURCE B</strong> — energia presente na fonte B.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                O MPM 48/48-3 serve para:
+                <div class="quiz-option">A) Amplificar sinal óptico</div>
+                <div class="quiz-option">B) Alimentar o chassi com energia</div>
+                <div class="quiz-option">C) Resfriar módulos</div>
+            </li>
+
+            <li class="mb-3">
+                Quantas fontes independentes o MPM suporta?
+                <div class="quiz-option">A) 1</div>
+                <div class="quiz-option">B) 2 (A e B)</div>
+                <div class="quiz-option">C) 3</div>
+            </li>
+
+            <li class="mb-3">
+                O LED POWER indica:
+                <div class="quiz-option">A) Falha no chassi</div>
+                <div class="quiz-option">B) Energia presente</div>
+                <div class="quiz-option">C) Aquecimento</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — PADTEC MPM 48/48-3</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>
