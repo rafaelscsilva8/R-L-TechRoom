@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SPVL-4SM — Módulo Óptico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SPVL-4SM, explicado de forma clara e acessível para iniciantes." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item">DCM17001</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">SPVL-4SM</h1>
+                <p class="lead">Versão especializada do módulo SPVL-4, utilizada para aplicações ópticas específicas dentro do chassi.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/Supervisor SPVL-4SM.png" class="img-fluid rounded shadow" alt="SPVL-4SM Module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o SPVL-4SM?</h2>
+    <p>
+        Imagine que você tem um rack cheio de equipamentos (como vários "caixas" de comunicação) dentro de uma central de telecomunicações.
+    </p>
+    <p>
+        O SPVL-4SM é como um "fiscal de prateleira" que só cuida dos equipamentos da sua própria prateleira. Ele não toma decisões sozinho, apenas obedece ao "chefe" (SPVL-4) e passa informações para ele.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <ul>
+        <li>Ele fica escutando o chefe (Supervisor Pai) e recebe ordens.</li>
+        <li>Quando recebe uma ordem, ele verifica se é para algum equipamento da sua prateleira.</li>
+        <li>Se for, ele repassa a ordem; se não for, ele ignora.</li>
+        <li>Ele também coleta informações de desempenho dos equipamentos da sua prateleira e envia para o chefe.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores</h2>
+    <div>
+        <ul>
+            <li>Ele não tem muitas portas na frente.</li>
+            <li>A comunicação com o chefe é feita por dentro do rack, através dos conectores traseiros.</li>
+            <li>Na lateral, tem um pequeno seletor com chaves (dip switch) que define seu "número de identificação" na prateleira.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com a mesma voltagem do rack (-48V).</li>
+        <li>Consome muito pouca energia (quase nada).</li>
+        <li>É muito durável: pode funcionar por mais de 20 anos sem quebrar.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>Use uma pulseira antiestática.</li>
+        <li>Ajuste o seletor lateral para o número da prateleira (ex: se for a prateleira 4, ligue a chave 4).</li>
+        <li>Encaixe o módulo no rack.</li>
+        <li>Pronto! Ele já começa a funcionar.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>Não tem botão: liga sozinho ao ser encaixado no rack com energia.</li>
+        <li>A luz POWER verde acende.</li>
+        <li>A luz TX/RX amarela piscante mostra que está "conversando" com o chefe.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>A única configuração é o seletor lateral (dip switch).</li>
+        <li>Cada chave representa um número de prateleira.</li>
+        <li>Só uma chave deve ficar ligada por módulo.</li>
+        <li>Não precisa de computador para configurar.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Sempre use pulseira antiestática.</li>
+        <li>Verifique se o seletor lateral está correto antes de instalar.</li>
+        <li>Observe as luzes:
+            <ul>
+                <li>Verde = energia OK</li>
+                <li>Amarelo piscante = comunicação ativa</li>
+            </ul>
+        </li>
+        <li>Se parar de funcionar, verifique o seletor e se está bem encaixado.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+
+    <h2>9. Vantagens</h2>
+    <ul>
+        <li>Muito simples e confiável.</li>
+        <li>Quase não consome energia.</li>
+        <li>Alivia o trabalho do "chefe" (Supervisor Pai).</li>
+        <li>Fácil de instalar e substituir.</li>
+    </ul>
+
+    <h2>10. Limitações</h2>
+    <ul>
+        <li>Só gerencia uma prateleira.</li>
+        <li>Não armazena dados.</li>
+        <li>Configuração manual (pode errar o número).</li>
+        <li>Não tem tela nem botões.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual a principal função do módulo SPVL-4SM?
+                <div class="quiz-option">A) Gerar energia para o chassi.</div>
+                <div class="quiz-option">B) Gerenciar sinais ópticos especializados.</div>
+                <div class="quiz-option">C) Amplificar sinais de rádio frequência.</div>
+            </li>
+
+            <li class="mb-3">
+                Como o módulo SPVL-4SM é ligado após a instalação?
+                <div class="quiz-option">A) Através de chaves Source A e Source B.</div>
+                <div class="quiz-option">B) Deve-se conectar um cabo -48V externo.</div>
+                <div class="quiz-option">C) Liga automaticamente ao ser inserido no chassi energizado.</div>
+            </li>
+
+            <li class="mb-3">
+                Qual é uma boa prática de manutenção para o SPVL-4SM?
+                <div class="quiz-option">A) Aplicar graxa nas portas ópticas para lubrificação.</div>
+                <div class="quiz-option">B) Manter conectores sempre tampados quando não estiverem sendo usados.</div>
+                <div class="quiz-option">C) Curvar as fibras em ângulos agudos para economizar espaço.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SPVL-4SM</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

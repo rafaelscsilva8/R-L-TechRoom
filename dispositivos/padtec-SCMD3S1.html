@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SCMD3S1 — Supervisory Communication Module</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SCMD3S1, explicado de forma clara e acessível para iniciantes." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap e CSS principal -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+
+        .quiz-option {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin: 4px 0;
+        }
+        .quiz-option:hover { background: #f4f4f4; }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="../index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="../index.html" class="nav-item nav-link">Início</a>
+            <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="../imagens.html" class="nav-item nav-link">Imagens</a>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">SCMD3S1</h1>
+                <p class="lead">
+                    A "caixa de junção óptica inteligente" que permite que o canal de controle viaje junto com os dados na fibra, sem se misturar.
+                </p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/SCMD3S1.png" class="img-fluid rounded shadow" alt="SCMD3S1 Module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTEÚDO -->
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é?</h2>
+    <p>É uma "caixa de junção óptica inteligente" que permite que o canal de controle e monitoramento (como um "rádio walkie-talkie" da rede) viaje junto com os dados principais na fibra óptica, sem se misturar ou atrapalhar. Pense nela como um "carrinho extra" acoplado a um trem de carga: leva as ferramentas de controle junto com a carga, mas não interfere no transporte.</p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>Funciona como um "adicionador e removedor" de um canal especial:</p>
+    
+    <h4>Na ida (transmissão):</h4>
+    <ul>
+        <li>Pega o sinal de dados principal (já amplificado) e o sinal de supervisão (controle).</li>
+        <li>Junta os dois em um único cabo de fibra - cada um em uma "cor" de luz diferente.</li>
+    </ul>
+    
+    <h4>Na volta (recepção):</h4>
+    <ul>
+        <li>Recebe o cabo com dados + controle misturados.</li>
+        <li>Separa o sinal de controle e o envia para a central de monitoramento.</li>
+        <li>Manda os dados puros para o próximo equipamento.</li>
+    </ul>
+    
+    <p><strong>É bidirecional:</strong> faz esse processo nos dois sentidos da comunicação.</p>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e conectores do dispositivo</h2>
+    <p><strong>Apenas conexões de fibra óptica</strong> (conectores verdes/azuis, tipo SC ou LC):</p>
+    
+    <h4>Lado "Misturador" (SCM):</h4>
+    <ul>
+        <li><strong>DATA:</strong> Entrada dos dados principais.</li>
+        <li><strong>SUPERVISORY CHANNEL:</strong> Entrada do sinal de controle (1510 nm).</li>
+        <li><strong>LINE:</strong> Saída com tudo misturado.</li>
+    </ul>
+    
+    <h4>Lado "Separador" (SCD):</h4>
+    <ul>
+        <li><strong>LINE:</strong> Entrada com tudo misturado.</li>
+        <li><strong>SUPERVISORY CHANNEL:</strong> Saída só do sinal de controle.</li>
+        <li><strong>DATA:</strong> Saída só dos dados principais.</li>
+    </ul>
+    
+    <h4>Não tem:</h4>
+    <ul>
+        <li>Tomadas de energia</li>
+        <li>Botões</li>
+        <li>Luzes de status</li>
+        <li>Cabos elétricos</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características elétricas</h2>
+    <ul>
+        <li><strong>Não usa eletricidade!</strong> É um dispositivo 100% passivo.</li>
+        <li>Funciona apenas com luz que passa pela fibra.</li>
+        <li><strong>Extremamente durável:</strong> Vida útil estimada em 500.000 horas (mais de 57 anos).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como instalar?</h2>
+    <ol>
+        <li><strong>Coloque no rack:</strong> Encaixe no slot e aparafuse.</li>
+        <li><strong>Conecte as fibras nos lugares certos:</strong>
+            <ul>
+                <li>No lado esquerdo (SCM): Dados principais + Controle → Saída mista</li>
+                <li>No lado direito (SCD): Entrada mista → Dados puros + Controle puro</li>
+            </ul>
+        </li>
+        <li><strong>Pronto!</strong> Não precisa ligar na tomada.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como ligar?</h2>
+    <ul>
+        <li>Não tem botão de ligar/desligar.</li>
+        <li>Funciona automaticamente assim que a luz (sinal óptico) começa a passar pelas fibras conectadas.</li>
+        <li>É como um espelho ou prisma - não precisa de energia, só da luz que chega.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações básicas do dispositivo</h2>
+    <ul>
+        <li><strong>Nenhuma configuração.</strong></li>
+        <li>Não tem telinha, nem chaves, nem software.</li>
+        <li>É <strong>plug and play total:</strong> conectou, funciona.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e boas práticas</h2>
+    
+    <h4>Para Retirar com Segurança:</h4>
+    <ol>
+        <li>Desligue os lasers dos equipamentos que mandam sinal para ele (para não olhar para luz forte).</li>
+        <li>Desconecte todos os cabos de fibra.</li>
+        <li>Solte os parafusos e retire do rack.</li>
+    </ol>
+    
+    <h4>O que Ele NÃO Faz (Importante):</h4>
+    <ul>
+        <li>Não avisa se está com problema - não tem luzes de alerta.</li>
+        <li>Não manda mensagem para o sistema central.</li>
+        <li>Não desliga lasers automaticamente se a fibra for cortada (precisa de outro modelo para isso).</li>
+        <li>Você só descobre que ele falhou se a comunicação de controle parar.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li><strong>Superconfiável:</strong> Sem eletrônicos, não queima, não superaquece.</li>
+        <li><strong>Econômico:</strong> Não gasta energia elétrica.</li>
+        <li><strong>Simples:</strong> Não dá erro de configuração - ou funciona ou não funciona.</li>
+        <li><strong>Bidirecional:</strong> Otimizado para redes que trafegam dados nos dois sentidos.</li>
+        <li><strong>Longa vida útil:</strong> Pode funcionar por décadas sem manutenção.</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li><strong>"Invisível":</strong> Não dá sinais de que está funcionando - você tem que confiar.</li>
+        <li><strong>Sem proteção de segurança:</strong> Se a fibra for cortada, não desliga os lasers potentes automaticamente (função que outros modelos têm).</li>
+        <li><strong>Diagnóstico difícil:</strong> Se houver problema, é preciso testar cada conexão com equipamento especial.</li>
+        <li><strong>Não expansível:</strong> Faz só uma função específica - juntar e separar canais.</li>
+    </ul>
+</section>
+
+<!-- QUIZ -->
+<section class="mb-5">
+    <h2>Questionário</h2>
+    <p>Responda escolhendo a alternativa correta:</p>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                O SCMD3S1 é responsável por:
+                <div class="quiz-option">A) Amplificar sinais ópticos</div>
+                <div class="quiz-option">B) Supervisão e comunicação interna do chassi</div>
+                <div class="quiz-option">C) Armazenar logs de rede</div>
+            </li>
+
+            <li class="mb-3">
+                O que indica o funcionamento correto do módulo?
+                <div class="quiz-option">A) LEDs indicadores ativos</div>
+                <div class="quiz-option">B) Som de inicialização</div>
+                <div class="quiz-option">C) Tela embutida no módulo</div>
+            </li>
+
+            <li class="mb-3">
+                O SCMD3S1 liga quando:
+                <div class="quiz-option">A) O botão frontal é pressionado</div>
+                <div class="quiz-option">B) O chassi é energizado</div>
+                <div class="quiz-option">C) É conectado a uma fonte externa</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SCMD3S1</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

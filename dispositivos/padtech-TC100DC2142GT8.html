@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>PADTEC TC100DC2142GT8 — Guia Simples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Guia simples e didático do PADTEC TC100DC2142GT8. Entenda o que é, como funciona e para que serve um Combiner 10 Gb/s multiprotocolo."/>
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <!-- Google Fonts & Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">PADTEC TC100DC2142GT8</h1>
+                <p class="lead">
+                    Uma "caixinha agregadora de sinais" que junta 8 conexões diferentes em uma única fibra óptica para transmissão de longa distância.
+                </p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/tc100.png" class="img-fluid rounded shadow" alt="Equipamento TC100DC2142GT8">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+
+<section class="mb-5">
+    <h2>1. O que é?</h2>
+    <p>
+        É uma <strong>"caixinha agregadora de sinais"</strong> que junta o tráfego de <strong>8 conexões diferentes</strong> (como internet, redes de dados, etc.) em um único cabo de luz (fibra óptica) para ser transmitido a longas distâncias. Ele faz parte de um sistema maior chamado <strong>LightPad</strong>, usado por operadoras de telecomunicações.
+    </p>
+</section>
+
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>
+        Imagine uma <strong>rodovia com várias pistas</strong> (os 8 cabos de entrada) que se juntam em <strong>uma única pista rápida</strong> (a saída OTU2).
+    </p>
+    <p>
+        Ele converte os sinais elétricos em luz, organiza os dados, adiciona uma <strong>"proteção contra erros" (FEC)</strong> e envia tudo por uma fibra óptica especial. Na outra ponta, outro equipamento faz o inverso: separa os 8 sinais novamente.
+    </p>
+</section>
+
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores</h2>
+    <ul>
+        <li><strong>Entradas/Saídas dos clientes:</strong> 8 portinhas <strong>LC</strong> (as pequenas, quadradinhas) onde se conectam os cabos dos clientes.</li>
+        <li><strong>Porta de rede (principal):</strong> 1 porta <strong>LC azul</strong> (mais sensível) que leva o sinal agregado para a rede de longa distância.</li>
+        <li><strong>Alimentação:</strong> Ligado direto no painel traseiro do rack, não tem tomada externa.</li>
+        <li><strong>Opção de proteção:</strong> Tem uma entrada de telefone <strong>(RJ-11)</strong> para caso queira duplicar o sinal e evitar queda (opcional).</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com <strong>-48 Volts</strong> (padrão de telefonia).</li>
+        <li>Consome cerca de <strong>1 Ampere</strong> (como uma lâmpada LED potente).</li>
+        <li>Pode operar mesmo com variação na voltagem (de -60V a -36V).</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>5. Como instalar</h2>
+    <ol>
+        <li>Use uma <strong>pulseira antiestática</strong> (para não queimar o equipamento).</li>
+        <li><strong>Encraxe</strong> o aparelho no rack (ele ocupa 2 espaços verticais).</li>
+        <li>Conecte os <strong>cabos de fibra óptica</strong> nas portinhas certas:
+            <ul>
+                <li>Clientes: conectores cinzas (LC-PC).</li>
+                <li>Rede: conector azul (LC-APC).</li>
+            </ul>
+        </li>
+        <li>A energia vem sozinha quando encaixado no rack.</li>
+    </ol>
+</section>
+
+
+<section class="mb-5">
+    <h2>6. Como ligar</h2>
+    <ul>
+        <li>Basta encaixar no rack → acende uma <strong>luz verde (POWER)</strong>.</li>
+        <li>Os <strong>lasers</strong> (emissores de luz) podem ser ligados ou desligados remotamente pelo computador de controle.</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Cada porta pode receber um <strong>tipo de sinal diferente</strong> (internet, rede de dados, etc.).</li>
+        <li><strong>Atenção:</strong> Se usar um sinal mais "gordinho" (2G-FC), ele ocupa 2 portas ao mesmo tempo.</li>
+        <li>Dá para escolher se quer <strong>proteção contra erros ligada ou não</strong> (melhor deixar ligado).</li>
+        <li>Pode-se ajustar o <strong>canal de luz</strong> (como mudar o canal da TV) se for o modelo "sintonizável".</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li><strong>Sempre limpe as pontas dos cabos</strong> antes de conectar (sujeira atrapalha a luz).</li>
+        <li><strong>Nunca olhe diretamente</strong> nas saídas de fibra (tem luz laser invisível).</li>
+        <li>Se o equipamento <strong>esquentar muito (acima de 70°C)</strong>, ele desliga sozinho para não queimar.</li>
+        <li><strong>Para tirar do rack:</strong>
+            <ol>
+                <li>Desconecte os cabos.</li>
+                <li>Use a pulseira antiestática.</li>
+                <li>Guarde numa embalagem antiestática.</li>
+            </ol>
+        </li>
+        <li><strong>Luzes de alerta:</strong>
+            <ul>
+                <li>Verde = tudo ok.</li>
+                <li>Vermelho = problema (sem sinal, laser desligado, falha, etc.).</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>9. Vantagens</h2>
+    <ul>
+        <li><strong>Economia de fibra:</strong> Junta 8 sinais em 1 só cabo.</li>
+        <li><strong>Versátil:</strong> Funciona com vários tipos de rede.</li>
+        <li><strong>Seguro:</strong> Tem proteção contra erros e opção de sinal reserva.</li>
+        <li><strong>Controlável:</strong> Pode ser gerenciado à distância.</li>
+        <li><strong>Durável:</strong> MTBF de 200.000 horas (≈23 anos de uso contínuo).</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>10. Limitações</h2>
+    <ul>
+        <li><strong>Regras de uso:</strong> Alguns tipos de sinal só funcionam em portas específicas (S5 a S8).</li>
+        <li><strong>Esquenta:</strong> Pode desligar se o local for muito quente.</li>
+        <li><strong>Depende do SFP:</strong> A qualidade do sinal varia conforme o "conversor" (SFP) usado.</li>
+        <li><strong>Complexo para configurar:</strong> Precisa de técnico especializado.</li>
+        <li><strong>Caro:</strong> Equipamento profissional, não é para uso doméstico.</li>
+    </ul>
+</section>
+
+<!-- Mini Questionário -->
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                O TC100DC2142GT8 é um:
+                <div class="quiz-option">A) Switch de rede</div>
+                <div class="quiz-option">B) Amplificador óptico</div>
+                <div class="quiz-option">C) Combiner que agrega 8 sinais em 1</div>
+            </li>
+
+            <li class="mb-3">
+                Quantas portas de cliente ele possui?
+                <div class="quiz-option">A) 4 portas</div>
+                <div class="quiz-option">B) 8 portas</div>
+                <div class="quiz-option">C) 16 portas</div>
+            </li>
+
+            <li class="mb-3">
+                Qual voltagem ele utiliza?
+                <div class="quiz-option">A) 12V</div>
+                <div class="quiz-option">B) -48V</div>
+                <div class="quiz-option">C) 110V</div>
+            </li>
+
+            <li class="mb-3">
+                O que acontece se ele esquentar acima de 70°C?
+                <div class="quiz-option">A) Acelera o processamento</div>
+                <div class="quiz-option">B) Desliga automaticamente</div>
+                <div class="quiz-option">C) Emite um alarme sonoro</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — PADTEC TC100DC2142GT8</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

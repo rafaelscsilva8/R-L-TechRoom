@@ -8,7 +8,7 @@
 
     <link href="img/tecnologia.png" rel="icon" />
 
-    <!-- Google Fonts (mesmas das outras páginas) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -43,8 +43,6 @@
 
 <body>
 
-<body>
-
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
@@ -60,8 +58,34 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
                 <div class="dropdown-menu fade-down m-0">
-                    <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
-                    <a href="padtec-DCM17001.html" class="dropdown-item">PADTEC DCM17001</a>
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
                 </div>
             </div>
             <a href="../contato.html" class="nav-item nav-link">Contato</a>
@@ -76,7 +100,7 @@
             <div class="col-lg-6">
                 <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
                 <h1 class="display-5 mb-3">PADTEC MPM 48/48-3</h1>
-                <p class="lead">Módulo de potência responsável pela alimentação principal de equipamentos Padtec.</p>
+                <p class="lead">Módulo de potência responsável pela alimentação principal de equipamentos Padtec. O "Quadro de Força" do bastidor da Plataforma LightPad.</p>
             </div>
             <div class="col-lg-6 text-center">
                 <img src="../img/mpm.jpg" class="img-fluid rounded shadow" alt="Padtec MPM 48/48-3">
@@ -88,49 +112,100 @@
 <main class="container my-5">
 
 <section class="mb-5">
-    <h2>O que é o PADTEC MPM 48/48-3?</h2>
-    <p>
-        O <strong>MPM 48/48-3</strong> (Main Power Module) é um <strong>módulo de alimentação principal</strong>. Ele recebe energia externa — geralmente <strong>-48V</strong>, padrão em telecom — e distribui essa energia para os equipamentos instalados no chassi.
-    </p>
-
-    <p>
-        Imagine que o chassi é uma casa cheia de aparelhos, e o MPM é o "relógio de luz" que recebe a energia da rua e distribui para todos os cômodos.
-    </p>
-
-    <p>
-        Ele recebe energia de duas fontes: <strong>Source A</strong> e <strong>Source B</strong>. Isso garante que, se uma fonte falhar, a outra mantém tudo funcionando — como um gerador de reserva.
-    </p>
+    <h2>1. O que é</h2>
+    <p>O MPM (Main Power Module), ou Módulo Principal de Energia, é basicamente o "Quadro de Força" ou o "Distribuidor de Eletricidade" de um grande armário de equipamentos (o bastidor da Plataforma LightPad). Sua missão é pegar a energia que vem de fora e distribuí-la para todos os equipamentos lá dentro.</p>
 </section>
 
 <section class="mb-5">
-    <h2>Funções principais</h2>
-
-    <ul>
-        <li>Recebe energia externa de -48V;</li>
-        <li>Distribui energia para todos os módulos do chassi;</li>
-        <li>Possui duas fontes independentes (A e B) para redundância;</li>
-        <li>Indica falhas e funcionamento através de LEDs.</li>
-    </ul>
+    <h2>2. Como funciona</h2>
+    <h4>Duas Fontes de Energia:</h4>
+    <p>Ele aceita energia de duas fontes diferentes e independentes (chamadas Via A e Via B).</p>
+    
+    <h4>Segurança Sem Parar:</h4>
+    <p>Se uma das fontes de energia cair, ele tem um mecanismo interno (um "somador a diodos") que permite trocar instantaneamente para a outra fonte, sem desligar nada.</p>
+    
+    <h4>Energia Limpa:</h4>
+    <p>Antes de entregar a eletricidade aos equipamentos, ele a passa por um filtro especial (Filtro EMI) para remover qualquer "sujeira" ou "ruído" elétrico que possa atrapalhar o funcionamento dos equipamentos.</p>
+    
+    <h4>Proteção:</h4>
+    <p>Ele usa disjuntores (um para cada Via A e Via B) para proteger contra excesso de energia ou curtos-circuitos.</p>
+    
+    <h4>O que ele fornece:</h4>
+    <p>Ele entrega -48 VDC, 0 VDC, e um ponto de aterramento (Terra).</p>
 </section>
 
 <section class="mb-5">
-    <h2>Como ligar</h2>
+    <h2>3. Portas e conectores do dispositivo</h2>
+    <p>O MPM usa três tipos de conexões, todas elétricas:</p>
+    
+    <h4>CON1 (Entrada):</h4>
+    <p>É onde você conecta os dois cabos de energia que vêm das fontes externas (Via A e Via B).</p>
+    
+    <h4>CON2 (Saída):</h4>
+    <p>É a porta principal por onde sai a energia que será distribuída para alimentar todos os equipamentos dentro do armário.</p>
+    
+    <h4>CON3 e CON4 ALARME:</h4>
+    <p>São pequenas conexões para cabos que avisam o sistema de monitoramento (SHK) se a energia da Via A (CON3) ou da Via B (CON4) falhou.</p>
+</section>
 
+<section class="mb-5">
+    <h2>4. Características elétricas</h2>
+    <p><strong>Força Máxima:</strong> Ele pode fornecer uma corrente total de até 16 Ampéres.</p>
+    <p><strong>Tolerância:</strong> Ele é projetado para lidar com variações normais de voltagem, aceitando tensões entre -36 VDC e -60 VDC.</p>
+</section>
+
+<section class="mb-5">
+    <h2>5. Configurações básicas do dispositivo</h2>
+    <p>O MPM é simples: Ele não possui configurações ou ajustes no hardware. Você apenas o instala e conecta os cabos.</p>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como instalar e como ligar</h2>
     <ol>
-        <li>Conecte a energia -48V no bloco de terminais (marcado como 48V);</li>
-        <li>Conecte o retorno/terra conforme indicado (EARTH);</li>
-        <li>Ligue as chaves <strong>Source A</strong> e <strong>Source B</strong> para ativar cada entrada de energia;</li>
-        <li>Verifique se os LEDs <strong>POWER</strong>, <strong>SOURCE A</strong> e <strong>SOURCE B</strong> acendem corretamente.</li>
+        <li><strong>Use Pulseira:</strong> Sempre use uma pulseira antiestática para proteger os equipamentos.</li>
+        <li><strong>Encaixe:</strong> Insira o módulo no armário e parafuse-o.</li>
+        <li><strong>Conecte as Fontes:</strong> Ligue os cabos de energia DC das Vias A e B (no CON1).</li>
+        <li><strong>Conecte os Alarmes:</strong> Ligue os fios de alarme (CON3 e CON4).</li>
+        <li><strong>Conecte as Saídas:</strong> Ligue todos os cabos elétricos que vão para os equipamentos (no CON2).</li>
+        <li><strong>Ligue os Disjuntores:</strong> Por fim, acione os disjuntores das Vias A e B no painel frontal para ligar o sistema.</li>
     </ol>
 </section>
 
 <section class="mb-5">
-    <h2>O que significam os LEDs?</h2>
+    <h2>7. Manutenção e boas práticas (Remoção)</h2>
+    
+    <h4>Segurança Primeiro:</h4>
+    <p>Use sempre a pulseira antiestática.</p>
+    
+    <h4>Desligue o Fornecimento:</h4>
+    <p>Antes de mexer no módulo ou em qualquer equipamento conectado a ele, você deve desligar os disjuntores das Vias A e B no painel frontal.</p>
+    
+    <h4>Desconecte em Ordem:</h4>
+    <p>Desligue todos os cabos de saída (para os equipamentos), depois os fios de alarme, e, por último, os cabos de entrada de energia (Vias A e B).</p>
+    
+    <h4>Cuidado com a Luz:</h4>
+    <p>O LED de "POWER" aceso significa que a saída de energia (CON2) está ligada. O operador deve tomar cuidado ao manusear as unidades enquanto essa luz estiver acesa.</p>
+    
+    <h4>Proteção do Usuário:</h4>
+    <p>O painel de acrílico protege o usuário contra curto-circuitos acidentais ao manusear os conectores.</p>
+</section>
 
+<section class="mb-5">
+    
+    <h2>8. Vantagens</h2>
     <ul>
-        <li><strong>POWER</strong> — indica que o módulo está energizado;</li>
-        <li><strong>SOURCE A</strong> — energia presente na fonte A;</li>
-        <li><strong>SOURCE B</strong> — energia presente na fonte B.</li>
+        <li><strong>Máxima Confiabilidade:</strong> Tem dupla entrada de energia com chaveamento automático sem interrupção.</li>
+        <li><strong>Energia de Qualidade:</strong> Possui filtro para evitar interferência eletrônica (EMI).</li>
+        <li><strong>Alta Proteção:</strong> Protegido por disjuntores e varistores contra sobre-tensão e sobre-corrente.</li>
+        <li><strong>Monitoramento Inteligente:</strong> Avisa o sistema de gerência se houver queda de energia na Via A ou Via B.</li>
+        <li><strong>Segurança Física:</strong> Possui painel de acrílico para proteger os conectores e o usuário.</li>
+    </ul>
+    
+    <h2>9. Limitações</h2>
+    <ul>
+        <li><strong>Não Aceita Comandos:</strong> Não aceita comandos à distância para ser controlado (telecomandos).</li>
+        <li><strong>Sem Fibra Óptica:</strong> Não possui interfaces ópticas (apenas elétricas).</li>
+        <li><strong>Alerta Limitado:</strong> Só consegue avisar o sistema sobre a queda de energia da Via A ou Via B se elas não caírem ao mesmo tempo.</li>
     </ul>
 </section>
 

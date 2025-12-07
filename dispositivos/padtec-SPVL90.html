@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SPVL-90 — Módulo Óptico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SPVL-90, explicado de forma clara e acessível." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-DCM17001.html" class="dropdown-item">DCM17001</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">SPVL-90</h1>
+                <p class="lead">Módulo óptico utilizado para controle, roteamento ou processamento de sinais dentro do chassi.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/SPVL-90.png" class="img-fluid rounded shadow" alt="SPVL-90 Module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o SPVL-90?</h2>
+    <p>
+        Imagine uma sala de controle de uma grande empresa onde vários equipamentos de comunicação estão instalados em prateleiras grandes (racks).
+    </p>
+    <p>
+        O SPVL-90 é como o "computador central" que monitora e controla tudo o que acontece nessa sala. Ele é maior e mais potente que o modelo SPVL-4, feito para racks de tamanho grande (14U).
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <ul>
+        <li>Ele coleta informações de todos os equipamentos conectados a ele (amplificadores, conversores, chaves ópticas, etc.).</li>
+        <li>Conversa com outras salas de controle através de um canal de luz especial que viaja pela fibra óptica.</li>
+        <li>Pode ser acessado por um técnico no local ou remotamente de um centro de operações.</li>
+        <li>É como um "cérebro eletrônico" que garante que tudo funcione bem e se comunique corretamente.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <div>
+        <p><strong>Na frente do SPVL-90 você encontra:</strong></p>
+        <ul>
+            <li><strong>Porta CRAFT TERMINAL (DB9)</strong>: para conectar um notebook e configurar no local.</li>
+            <li><strong>Porta ETHERNET (RJ-45)</strong>: para comunicação com a central de monitoramento remoto.</li>
+            <li><strong>Portas seriais (RS-232/RS-422)</strong>: para conectar outros equipamentos em sequência.</li>
+            <li><strong>Entrada de energia</strong>: ele recebe energia direto do rack.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com -48V, padrão de telecomunicações.</li>
+        <li>Consome um pouco mais de energia que o modelo menor (SPVL-4), mas ainda é eficiente.</li>
+        <li>Muito confiável: pode funcionar por mais de 20 anos sem falhas.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>Use pulseira antiestática.</li>
+        <li>Encaixe o SPVL-90 no rack grande (14U).</li>
+        <li>Conecte os cabos das portas frontais (Ethernet, serial, etc.).</li>
+        <li>Ele já começa a funcionar sozinho.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>Não tem botão: liga automaticamente ao ser colocado no rack com energia.</li>
+        <li>Luz POWER verde = energia OK.</li>
+        <li>Luz CPU amarela piscante = sistema operando.</li>
+        <li>Luz ACT (ativa) = ele é o "chefe" principal (se houver um backup, só um fica com essa luz acesa).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Pode ser configurado localmente por um técnico com notebook.</li>
+        <li>Precisa de um endereço IP para comunicação remota.</li>
+        <li>Pode ser configurado como principal ou reserva (se houver outro igual no rack).</li>
+        <li>Controla vários equipamentos em cascata (como uma corrente de comando).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Sempre use pulseira antiestática.</li>
+        <li>Desconecte os cabos antes de remover.</li>
+        <li>Observe as luzes:
+            <ul>
+                <li>Verde = ligado</li>
+                <li>Amarelo piscante = trabalhando</li>
+                <li>ACT = é o chefe ativo</li>
+            </ul>
+        </li>
+        <li>Se parar de funcionar, verifique conexões e reinicie remotamente.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li>Feito para racks grandes (14U).</li>
+        <li>Controla muitos equipamentos ao mesmo tempo.</li>
+        <li>Comunicação com outras centrais via fibra.</li>
+        <li>Pode ter um backup para maior segurança.</li>
+    </ul>
+
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li>Consome mais energia que o modelo menor.</li>
+        <li>Só cabe em racks grandes.</li>
+        <li>Precisa de configuração técnica.</li>
+        <li>Custo maior que o SPVL-4.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual a principal função do SPVL-90 no chassi?
+                <div class="quiz-option">A) Gerar eletricidade de reserva.</div>
+                <div class="quiz-option">B) Resfriar os outros módulos.</div>
+                <div class="quiz-option">C) Controlar, rotear ou processar sinais ópticos.</div>
+            </li>
+
+            <li class="mb-3">
+                Como o módulo SPVL-90 é energizado?
+                <div class="quiz-option">A) Possui um cabo de alimentação -48V dedicado.</div>
+                <div class="quiz-option">B) Possui uma bateria interna que deve ser ligada.</div>
+                <div class="quiz-option">C) Ativa automaticamente ao receber energia do chassi.</div>
+            </li>
+
+            <li class="mb-3">
+                Em termos de manutenção, o que é importante para este módulo?
+                <div class="quiz-option">A) Lubrificar o conector traseiro periodicamente.</div>
+                <div class="quiz-option">B) Usar tampas protetoras em portas sem uso e evitar poeira.</div>
+                <div class="quiz-option">C) Realizar a limpeza apenas com produtos químicos fortes.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SPVL-90</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

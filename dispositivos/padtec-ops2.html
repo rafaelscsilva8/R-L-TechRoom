@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>PADTEC OPS2-4AA — Guia Simples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Guia simples e didático do Padtec OPS2-4AA. Entenda o que é, como funciona e para que serve um módulo de chaveamento e proteção óptica."/>
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">PADTEC OPS2-4AA</h1>
+                <p class="lead">
+                    O "desviador de emergência automático" para fibra óptica. Mantém sua conexão funcionando mesmo se uma fibra falhar.
+                </p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/ops2.jpg" class="img-fluid rounded shadow" alt="Imagem do Módulo Padtec OPS2-4AA">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é?</h2>
+    <p>É um "desviador de emergência automático" para fibra óptica. Pense em uma via férrea com dois trilhos: se um trilho quebra, o trem automaticamente desvia para o outro trilho sem parar. Essa "caixa" faz isso com sinais de internet por fibra: se uma fibra falha, ela instantaneamente muda para uma fibra reserva para manter a internet funcionando sem queda.</p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>Funciona como um guarda de trânsito de fibra:</p>
+    <ul>
+        <li>Ela fica escutando duas fibras ópticas ao mesmo tempo (a principal e a reserva).</li>
+        <li>Se a fibra principal tiver uma queda de sinal forte (como se o cabo fosse cortado), ela muda automaticamente para a fibra reserva em menos de 15 milésimos de segundo.</li>
+        <li>Você também pode mudar manualmente com um botão ou controlar à distância pelo computador da central.</li>
+        <li>Além disso, ela também divide o sinal de saída para enviar por duas rotas diferentes.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e conectores do dispositivo</h2>
+    
+    <h4>Conectores de Fibra (tipo LC):</h4>
+    <ul>
+        <li><strong>Entrada 1 e Entrada 2:</strong> Onde você conecta as duas fibras (principal e reserva).</li>
+        <li><strong>Entrada do Equipamento:</strong> Onde chega o sinal que será protegido.</li>
+        <li><strong>Saída para o Equipamento:</strong> De onde sai o sinal protegido (vindo da fibra que está funcionando).</li>
+        <li><strong>Saída 1 e Saída 2:</strong> Para enviar o sinal dividido para dois lugares diferentes.</li>
+    </ul>
+    
+    <h4>Conector de Energia:</h4>
+    <ul>
+        <li>Usa -48 Volts (padrão de equipamentos de telefonia).</li>
+    </ul>
+    
+    <h4>Painel Frontal:</h4>
+    
+    <h5>Botões:</h5>
+    <ul>
+        <li><strong>IN1/IN2</strong> para mudar manualmente entre as fibras</li>
+        <li><strong>AUTO</strong> liga/desliga o modo automático</li>
+        <li><strong>SET</strong> ajusta o nível de referência do sinal</li>
+    </ul>
+    
+    <h5>Luzes de Status:</h5>
+    <ul>
+        <li><strong>IN1 e IN2</strong> mostram qual fibra está sendo usada</li>
+        <li><strong>AUTO</strong> indica se está no modo automático</li>
+        <li><strong>LOCK</strong> indica se está travado para controle remoto</li>
+        <li><strong>Barra de LEDs</strong> mostra se o sinal está forte ou fraco</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características elétricas</h2>
+    <ul>
+        <li><strong>Voltagem:</strong> -48 Volts (tomada especial de telecom)</li>
+        <li><strong>Consumo:</strong> Muito baixo, equivalente a uma lâmpada LED de baixa potência (~90 mA)</li>
+        <li><strong>Velocidade de Mudança:</strong> Menos de 15 milissegundos para trocar de fibra</li>
+        <li><strong>Durabilidade:</strong> Feita para durar 200.000 horas (mais de 22 anos)</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como instalar?</h2>
+    <ol>
+        <li><strong>Coloque no rack:</strong> Encaixe no espaço de 4U (4 unidades de altura) e aparafuse.</li>
+        <li><strong>Conecte as fibras:</strong>
+            <ul>
+                <li>Fibra principal na Entrada 1</li>
+                <li>Fibra reserva na Entrada 2</li>
+                <li>Fibra do equipamento na Entrada do Equipamento</li>
+            </ul>
+        </li>
+        <li><strong>Conecte a energia (-48V).</strong></li>
+        <li><strong>Conecte ao sistema de controle</strong> (via backplane do rack).</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como ligar?</h2>
+    <ol>
+        <li>Conecte a energia (-48V).</li>
+        <li>A luz PWR acende (verde), está ligado.</li>
+        <li>A luz IN1 ou IN2 acende, mostra qual fibra está ativa.</li>
+        <li>Pressione o botão AUTO, a luz AUTO acende (agora está no modo automático).</li>
+        <li><strong>Pronto!</strong> Agora ela protegerá automaticamente sua conexão.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações básicas do dispositivo</h2>
+    <ul>
+        <li><strong>Modo Automático:</strong> Pressione AUTO, ela passa a mudar sozinha em caso de falha.</li>
+        <li><strong>Modo Manual:</strong> Use o botão IN1/IN2 para escolher qual fibra usar.</li>
+        <li><strong>Ajuste de Sensibilidade:</strong> Pelo computador da central, você ajusta quanta queda de sinal é necessária para acionar a mudança (padrão: 9 dB).</li>
+        <li><strong>Travamento (LOCK):</strong> Pode ser travada remotamente para que ninguém mexa nos botões.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e boas práticas</h2>
+    
+    <h4>Para Retirar com Segurança:</h4>
+    <ol>
+        <li>Use pulseira antiestática.</li>
+        <li>Desligue a energia.</li>
+        <li>Tire todos os cabos de fibra óptica.</li>
+        <li>Solte os parafusos e retire do rack.</li>
+    </ol>
+    
+    <h4>O que Ela Monitora e Avisa:</h4>
+    <ul>
+        <li>Se perdeu o sinal em alguma fibra</li>
+        <li>Se está no modo automático ou travado</li>
+        <li>Qual fibra está ativa no momento</li>
+        <li>Qual a força do sinal que está chegando</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li><strong>Proteção Instantânea:</strong> Troca de fibra em 15 ms, o usuário nem percebe.</li>
+        <li><strong>Modos Flexíveis:</strong> Automático, manual ou controle remoto.</li>
+        <li><strong>Monitoramento Visual:</strong> Barra de LEDs mostra a qualidade do sinal.</li>
+        <li><strong>Altamente Confiável:</strong> Feita para funcionar por décadas sem parar.</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li><strong>Ocupa Espaço:</strong> É alta (4U), precisa de bastante espaço no rack.</li>
+        <li><strong>Configuração Remota Necessária:</strong> Para ajustar a sensibilidade, precisa do sistema de gerenciamento.</li>
+        <li><strong>Energia Especial:</strong> Precisa de fonte de -48V (não é tomada comum).</li>
+        <li><strong>Não Tem Saídas de Alarme Simples:</strong> Diferente do modelo menor (1U), não tem aquelas saídas de alarme que ligam em sirenes ou luzes.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual a função principal do OPS2-4AA?
+                <div class="quiz-option">A) Multiplexar 4 canais DWDM</div>
+                <div class="quiz-option">B) Compensar dispersão cromática</div>
+                <div class="quiz-option">C) Realizar proteção e chaveamento automático de rotas ópticas</div>
+            </li>
+
+            <li class="mb-3">
+                Por que o OPS é considerado um equipamento ativo?
+                <div class="quiz-option">A) Porque ele usa a física da luz.</div>
+                <div class="quiz-option">B) Porque ele precisa de energia elétrica (48 VDC) para monitorar e chavear.</div>
+                <div class="quiz-option">C) Porque ele usa portas RJ45.</div>
+            </li>
+
+            <li class="mb-3">
+                Em caso de falha de sinal na Rota 1, o que o OPS faz no modo AUTO?
+                <div class="quiz-option">A) Desliga o equipamento.</div>
+                <div class="quiz-option">B) Chaveia o tráfego automaticamente para a Rota 2.</div>
+                <div class="quiz-option">C) Envia um alerta por e-mail.</div>
+            </li>
+
+            <li class="mb-3">
+                Que tipo de conector óptico é usado nas portas ROUTE 1 e ROUTE 2?
+                <div class="quiz-option">A) SC/APC</div>
+                <div class="quiz-option">B) LC/UPC</div>
+                <div class="quiz-option">C) SFP+</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — PADTEC OPS2-4AA</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

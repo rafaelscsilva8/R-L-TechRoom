@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>TCX12-4D-A0 — Transponder 10G Tunable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo TCX12-4D-A0, um transponder Padtec de 10 Gb/s com capacidade de ajuste de comprimento de onda (tunable)." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+        
+        pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">TCX12-4D-A0</h1>
+                <p class="lead">"Caixinha que junta 8 sinais em um só" - agrega múltiplos sinais em uma única fibra óptica para longa distância.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/TCX12-4D-A0.png" class="img-fluid rounded shadow" alt="TCX12-4D-A0 Module"> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é?</h2>
+    <p>
+        É uma <strong>"caixinha que junta 8 sinais em um só"</strong> - como se você tivesse 8 canais de TV diferentes e os transformasse em um único canal para enviar por um único cabo de fibra óptica a longas distâncias. Ele é usado por operadoras de telecomunicação.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p><strong>Da entrada para a saída:</strong></p>
+    <ul>
+        <li>Você conecta até 8 cabos de internet, TV, dados, etc. nas portas da frente.</li>
+        <li>Dentro dele, esses sinais são organizados e empacotados em um único "pacote óptico".</li>
+        <li>Esse pacote é enviado por um único cabo de fibra (ou dois, dependendo do modelo).</li>
+    </ul>
+    <p><strong>Do retorno para as saídas:</strong></p>
+    <ul>
+        <li>Na outra ponta, outro equipamento recebe o "pacote óptico".</li>
+        <li>O TCX desempacota e separa os 8 sinais originais.</li>
+        <li>Cada sinal volta para seu respectivo cabo.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores</h2>
+    <div>
+        <ul>
+            <li><strong>Portas dos clientes:</strong> 8 entradas/saídas pequenas (LC) para conectar os cabos dos clientes.</li>
+            <li><strong>Porta de rede:</strong> 1 ou 2 portas azuis (LC-APC) que saem para a fibra óptica principal.</li>
+            <li><strong>Alimentação:</strong> Ligado direto no rack (não tem tomada).</li>
+            <li><strong>Porta de rede (RJ-45):</strong> Para conectar ao computador de controle (só no modelo de 1U com duas saídas).</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com <strong>-48 Volts</strong> (padrão de telefonia).</li>
+        <li>Consome cerca de <strong>0,9 a 2 Amperes</strong>, dependendo do modelo (como uma lâmpada potente).</li>
+        <li>Aguenta variação de voltagem (de -60V a -36V).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como instalar</h2>
+    <ol>
+        <li>Use uma <strong>pulseira antiestática</strong> (para não queimar o aparelho).</li>
+        <li>Encaixe a unidade no rack (tamanho varia: 1U, 4U ou 9U).</li>
+        <li>Conecte os cabos de fibra:
+            <ul>
+                <li>Dos clientes: nas portas cinzas (LC-PC).</li>
+                <li>Da rede: nas portas azuis (LC-APC).</li>
+            </ul>
+        </li>
+        <li>A energia vem automaticamente quando encaixado no rack.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como ligar</h2>
+    <ul>
+        <li>Basta encaixar no rack → acende a luz verde (POWER).</li>
+        <li>Os emissores de luz (lasers) podem ser ligados ou desligados pelo computador de controle.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Cada porta pode receber um tipo de sinal diferente (internet, TV, rede de dados, etc.).</li>
+        <li>Não há restrição fixa - pode colocar qualquer sinal em qualquer porta.</li>
+        <li>Pode-se escolher o canal de luz (como mudar o canal da TV) se for o modelo "sintonizável".</li>
+        <li>Dá para ativar proteção contra erros (FEC) para melhorar a qualidade.</li>
+        <li>No modelo com duas saídas, é possível redirecionar sinais entre elas sem desmontar tudo.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Sempre limpe as pontas dos cabos antes de conectar.</li>
+        <li>Nunca olhe direto nas saídas de fibra (tem luz laser invisível).</li>
+        <li>Se esquentar muito (acima de 70°C), ele desliga sozinho.</li>
+        <li><strong>Para tirar do rack:</strong>
+            <ol>
+                <li>Desconecte os cabos.</li>
+                <li>Use pulseira antiestática.</li>
+                <li>Guarde em embalagem antiestática.</li>
+            </ol>
+        </li>
+        <li><strong>Luzes de aviso:</strong>
+            <ul>
+                <li>Verde = ligado.</li>
+                <li>Vermelho = problema (sem sinal, laser desligado, falha).</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>9. Vantagens</h2>
+    <ul>
+        <li><strong>Economiza fibra:</strong> Junta 8 cabos em 1 só.</li>
+        <li><strong>Muito versátil:</strong> Aceita internet, TV, dados, etc.</li>
+        <li><strong>Inteligente:</strong> Permite redirecionar sinais internamente sem desmontar tudo.</li>
+        <li><strong>Controlável à distância:</strong> Pode ser gerenciado por computador.</li>
+        <li><strong>Seguro:</strong> Tem proteção contra erros e contra temperatura alta.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>10. Limitações</h2>
+    <ul>
+        <li><strong>Esquenta:</strong> Pode desligar se o local for muito quente.</li>
+        <li><strong>Consome energia:</strong> Modelo menor (1U) consome mais.</li>
+        <li><strong>Precisa de técnico:</strong> Configuração é complexa.</li>
+        <li><strong>Caro:</strong> Equipamento profissional, não é para casa.</li>
+        <li><strong>Depende dos "conversores" (SFP):</strong> A qualidade varia conforme o modelo usado.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                O que o TCX12-4D-A0 faz com os sinais de entrada?
+                <div class="quiz-option">A) Amplifica cada sinal individualmente.</div>
+                <div class="quiz-option">B) Junta até 8 sinais em um único pacote óptico.</div>
+                <div class="quiz-option">C) Converte sinais analógicos em digitais.</div>
+            </li>
+
+            <li class="mb-3">
+                Quantas portas de cliente o TCX12-4D-A0 possui?
+                <div class="quiz-option">A) 4 portas</div>
+                <div class="quiz-option">B) 8 portas</div>
+                <div class="quiz-option">C) 16 portas</div>
+            </li>
+
+            <li class="mb-3">
+                O que significa quando a luz do equipamento está verde?
+                <div class="quiz-option">A) Há um problema no sistema.</div>
+                <div class="quiz-option">B) O equipamento está desligado.</div>
+                <div class="quiz-option">C) O equipamento está ligado e funcionando.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — TCX12-4D-A0</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SSC-10 — Módulo Splitter Óptico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SSC-10, explicado de forma clara e acessível para iniciantes." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item">DCM17001</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">SSC-10</h1>
+                <p class="lead">Módulo de distribuição de energia para racks de telecomunicações.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/SSC-10.png" class="img-fluid rounded shadow" alt="SSC-10 Module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o SSC-10?</h2>
+    <p>
+        Imagine um rack cheio de equipamentos eletrônicos (como servidores, roteadores, conversores de fibra óptica).
+    </p>
+    <p>
+        O SSC-10 é como o "quadro de força" ou "distribuidor de energia" desse rack. Ele pega a energia da fonte principal (-48V) e distribui para todas as placas e módulos dentro do rack, fazendo com que tudo funcione.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <ul>
+        <li>Ele recebe a energia da fonte externa (como uma tomada forte de -48V).</li>
+        <li>Divide essa energia para cada slot do rack, onde estão instalados os equipamentos.</li>
+        <li>Pode trabalhar em dupla (um principal e um reserva) para não falhar.</li>
+        <li>Monitora se a energia está estável e se os ventiladores do rack estão funcionando.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <div>
+        <ul>
+            <li>Tem conectores para a energia de entrada (como um cabo grosso).</li>
+            <li>Tem um conector pequeno (RJ-12) para enviar alarmes em caso de problema (como um sensor).</li>
+            <li>Não tem portas de internet ou fibra — só cuida da energia.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com -48V (padrão de telefonia e telecom).</li>
+        <li>Consome pouca energia própria, mas distribui muita.</li>
+        <li>Pode operar em temperaturas de -5°C a 45°C (como um ambiente climatizado).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>Desligue a energia do rack.</li>
+        <li>Encaixe o SSC-10 no lugar certo do rack (slot dedicado).</li>
+        <li>Conecte os cabos de força (vermelho/preto/terra).</li>
+        <li>Siga a ordem certa: no modelo SSC-AAAA, coloque no rack antes de ligar a energia, para não causar picos.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>Basta conectar a fonte de -48V.</li>
+        <li>A luz PWR verde acende = energia chegando.</li>
+        <li>A luz ACT verde = ele é o "chefe" da energia (se tiver um reserva).</li>
+        <li>A luz FAIL vermelha = algo errado (falta energia, ventilador parou, etc.).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Não tem botões para configurar — é "plug and play".</li>
+        <li>Se for o modelo SSC-AAAA, dá para controlar os ventiladores remotamente:
+            <ul>
+                <li>Ajustar velocidade</li>
+                <li>Ligar/desligar</li>
+            </ul>
+        </li>
+        <li>Os alarmes são automáticos e aparecem no sistema de monitoramento.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Sempre desligue a energia antes de mexer.</li>
+        <li>Observe as luzes regularmente:
+            <ul>
+                <li>Verde = tudo bem</li>
+                <li>Vermelho = problema</li>
+            </ul>
+        </li>
+        <li>Verifique os ventiladores do rack (se o modelo permitir controle).</li>
+        <li>Se tiver dois SSC-10 (principal e reserva), veja qual está ativo (luz ACT).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+
+    <h2>9. Vantagens</h2>
+    <ul>
+        <li>Distribui energia com segurança para todo o rack.</li>
+        <li>Pode ter backup (redundância) para não falhar.</li>
+        <li>Monitora falhas e ventoinhas.</li>
+        <li>Funciona tanto com equipamentos 40G quanto 100G (modelo certo).</li>
+    </ul>
+
+    <h2>10. Limitações</h2>
+    <ul>
+        <li>Se for para equipamentos 100G, precisa do modelo certo (SSC-BBAA).</li>
+        <li>Se instalar fora da ordem (modelo AAAA), pode reiniciar tudo.</li>
+        <li>Não tem funções extras — só energia.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual é a principal função do SSC-10?
+                <div class="quiz-option">A) Dividir sinais ópticos em múltiplas saídas.</div>
+                <div class="quiz-option">B) Distribuir energia para todos os módulos do rack.</div>
+                <div class="quiz-option">C) Converter sinais ópticos em elétricos.</div>
+            </li>
+
+            <li class="mb-3">
+                Como o SSC-10 é energizado?
+                <div class="quiz-option">A) Liga automaticamente ao ser encaixado no rack.</div>
+                <div class="quiz-option">B) Basta conectar a fonte de -48V.</div>
+                <div class="quiz-option">C) Precisa de configuração manual via software.</div>
+            </li>
+
+            <li class="mb-3">
+                O que significa a luz FAIL vermelha no SSC-10?
+                <div class="quiz-option">A) Indicador de comunicação ativa.</div>
+                <div class="quiz-option">B) Sistema em modo de espera.</div>
+                <div class="quiz-option">C) Algo errado (falta energia, ventilador parou, etc.).</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SSC-10</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

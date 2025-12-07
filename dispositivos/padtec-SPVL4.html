@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SPVL-4 — Módulo Óptico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SPVL-4, explicado de forma clara e acessível para iniciantes." />
+
+    <link href="../img/tecnologia.png" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap + CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)),
+                        url('../img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+
+        .quiz-option {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: .2s;
+        }
+        .quiz-option:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="../index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+            <a href="../index.html" class="nav-item nav-link">Início</a>
+            <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="../imagens.html" class="nav-item nav-link">Imagens</a>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item">DCM17001</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia Simples</h5>
+                <h1 class="display-5 mb-3">SPVL-4</h1>
+                <p class="lead">O "cérebro" ou "chefe de controle" da central de telecomunicações. Supervisor que monitora e comanda todos os equipamentos do rack.</p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/Supervisor SPVL-4.png" class="img-fluid rounded shadow" alt="SPVL-4 Module">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o SPVL-4?</h2>
+    <p>Pense no SPVL-4 como o "cérebro" ou "chefe de controle" de uma central de telecomunicações. Ele é a peça que monitora e comanda todos os outros equipamentos do rack, como amplificadores, conversores e multiplexadores. Sem ele, a estação não sabe o que está acontecendo e não consegue se comunicar com outras centrais.</p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <ul>
+        <li>Ele coleta informações de todos os equipamentos conectados a ele (como um supervisor numa fábrica).</li>
+        <li>Conversa com outras centrais através de um canal de luz especial que viaja pela fibra óptica.</li>
+        <li>Pode ser acessado localmente por um técnico com notebook ou remotamente de uma sala de controle.</li>
+        <li>É como um roteador inteligente que gerencia a rede óptica.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <p>O SPVL-4 tem algumas "portas" na frente, parecidas com as de um computador ou roteador:</p>
+    <ul>
+        <li><strong>Porta CRAFT TERMINAL (DB9):</strong> usada para conectar um notebook e configurar localmente.</li>
+        <li><strong>Porta ETHERNET (RJ-45):</strong> para comunicação com a central de gerenciamento.</li>
+        <li><strong>Portas RS-232 e RS-422:</strong> usadas para ligar outros equipamentos em série, como amplificadores e chaves ópticas.</li>
+        <li><strong>Entrada de energia:</strong> ele recebe energia direto do rack onde está instalado.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com -48V, tensão padrão de telecomunicações.</li>
+        <li>Consome pouca energia, equivalente a uma lâmpada pequena.</li>
+        <li>É muito confiável: pode funcionar por mais de 20 anos sem falhas (MTBF 200.000 horas).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>Use uma pulseira antiestática (para não queimar os circuitos).</li>
+        <li>Encaixe o SPVL-4 no slot do rack (modelo 4U).</li>
+        <li>Conecte os cabos das portas frontais (Ethernet, serial, etc.).</li>
+        <li><strong>Pronto!</strong> Ele já começa a funcionar.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>Não tem botão de liga/desliga: ele liga sozinho quando é encaixado no rack com energia.</li>
+        <li>A luz POWER verde acende para mostrar que está energizado.</li>
+        <li>A luz CPU amarela piscando indica que o sistema está rodando.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Pode ser configurado por um técnico via notebook na porta CRAFT.</li>
+        <li>Pode receber endereço IP para acesso remoto.</li>
+        <li>Pode bloquear acesso local para maior segurança.</li>
+        <li>Conecta-se a vários outros equipamentos em cascata (como uma corrente de comando).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li><strong>Sempre use pulseira antiestática</strong> ao manusear.</li>
+        <li><strong>Desconecte os cabos antes</strong> de remover do rack.</li>
+        <li><strong>Observe as luzes:</strong>
+            <ul>
+                <li>Verde = energia OK</li>
+                <li>Amarelo piscante = sistema operando</li>
+                <li>LOCK aceso = acesso local bloqueado</li>
+            </ul>
+        </li>
+        <li>Em caso de falha, tente reiniciar pela gerência ou verifique cabos.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li>É o centro de controle da estação.</li>
+        <li>Comunica-se com outras centrais via fibra.</li>
+        <li>Permite gerenciamento local e remoto.</li>
+        <li>Sistema estável (Linux).</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li>Só cabe em racks 4U (não serve para racks maiores).</li>
+        <li>Não tem redundância interna (se quebrar, perde o controle).</li>
+        <li>Precisa de técnico para configuração inicial.</li>
+    </ul>
+</section>
+
+<!-- QUIZ -->
+<section class="mb-5">
+    <h2>Questionário — Teste seus conhecimentos</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                O SPVL-4 é um módulo:
+                <div class="quiz-option">A) De alimentação elétrica</div>
+                <div class="quiz-option">B) Óptico utilizado para transmissão e recepção</div>
+                <div class="quiz-option">C) De roteamento IP</div>
+            </li>
+
+            <li class="mb-3">
+                O SPVL-4 liga:
+                <div class="quiz-option">A) Por botão frontal</div>
+                <div class="quiz-option">B) Automático ao ser inserido no chassi</div>
+                <div class="quiz-option">C) Somente com cabo USB</div>
+            </li>
+
+            <li class="mb-3">
+                Suas portas ópticas servem para:
+                <div class="quiz-option">A) Conectar cabos RJ45</div>
+                <div class="quiz-option">B) Entrada e saída de sinais ópticos</div>
+                <div class="quiz-option">C) Alimentar o módulo</div>
+            </li>
+
+            <li class="mb-3">
+                Uma limitação do módulo é:
+                <div class="quiz-option">A) Não funcionar sem chassi compatível</div>
+                <div class="quiz-option">B) Necessitar sistema de refrigeração líquida</div>
+                <div class="quiz-option">C) Operar somente com redes wireless</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SPVL-4</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

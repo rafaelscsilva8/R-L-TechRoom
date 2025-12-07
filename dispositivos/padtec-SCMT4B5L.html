@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SCMT-4B5L — Módulo de Comunicação e Transporte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SCMT-4B5L explicado em linguagem acessível." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap + CSS do site -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)),
+                        url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+        .card { border-radius: 12px; }
+
+        .quiz-option {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+        .quiz-option:hover { background: #f3f3f3; }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="../index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+            <a href="../index.html" class="nav-item nav-link">Início</a>
+            <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="../imagens.html" class="nav-item nav-link">Imagens</a>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">SCMT-4B5L</h1>
+
+                <p class="lead">
+                    O "posto de vigilância" da fibra óptica - monitora a rede e permite comunicação entre técnicos sem interferir no tráfego principal.
+                </p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/SCMT4B5L.png" class="img-fluid rounded shadow" alt="SCMT-4B5L Module">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTEÚDO -->
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o SCMT4B5L?</h2>
+    <p>Imagine que você tem uma longa estrada de fibra óptica (como uma rodovia de dados) entre duas cidades. O SCMT4B5L é como um posto de vigilância instalado ao longo dessa estrada. Sua função é monitorar se tudo está funcionando bem e permitir que os técnicos se comuniquem entre as duas pontas, sem interferir no tráfego principal de dados.</p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>Ele usa um canal especial de comunicação (como um rádio walkie-talkie) que viaja pela mesma fibra óptica, mas em uma "cor" de luz diferente (1510 nm).</p>
+    <ul>
+        <li>Converte mensagens elétricas em luz e vice-versa.</li>
+        <li>Permite que os técnicos conversem por voz ou troquem dados de controle entre as estações.</li>
+        <li>Se algo der errado na fibra, ele pode desligar automaticamente os lasers potentes (função ALS) para evitar acidentes.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <p>Pense nele como um pequeno aparelho com entradas e saídas:</p>
+    
+    <h4>Portas de luz (ópticas):</h4>
+    <ul>
+        <li>1 entrada de luz (RX)</li>
+        <li>1 saída de luz (TX)</li>
+        <li>Conectores parecidos com os de TV a cabo, mas menores (SC-APC)</li>
+    </ul>
+    
+    <h4>Portas elétricas:</h4>
+    <ul>
+        <li>1 entrada para telefone comum (RJ-11)</li>
+        <li>1 entrada para linha telefônica</li>
+        <li>1 entrada para dados de controle</li>
+        <li>1 conector redondo de 4 pinos (se tiver a função de segurança ALS)</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com bateria de -48V (como as usadas em telecomunicações)</li>
+        <li>Consome pouca energia, equivalente a uma lâmpada LED pequena</li>
+        <li>A energia vem diretamente do rack onde ele é instalado</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>Use uma pulseira antiestática (para não queimar o equipamento).</li>
+        <li>Encoste o dispositivo no slot do rack (sem empurrar totalmente).</li>
+        <li>Conecte os cabos de luz nas portas ópticas.</li>
+        <li>Empurre até encaixar completamente.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>Basta encaixar no rack ligado → ele acende sozinho!</li>
+        <li>A luz POWER verde indica que está funcionando.</li>
+        <li>Não tem botão de liga/desliga.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Se for o modelo sem gerenciamento: não precisa configurar nada.</li>
+        <li>Se for o com gerenciamento: um técnico pode ajustar via computador:
+            <ul>
+                <li>Ligar/desligar funções de segurança</li>
+                <li>Reiniciar contadores</li>
+                <li>Ativar restauração automática</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Sempre use a pulseira antiestática ao tocar no aparelho.</li>
+        <li>Antes de desconectar os cabos de luz, puxe o dispositivo metade para fora do rack para desligá-lo.</li>
+        <li>Não olhe diretamente para as portas de luz (pode machucar os olhos).</li>
+        <li>Observe as luzinhas do painel:
+            <ul>
+                <li>Verde = tudo ok</li>
+                <li>Vermelho = problema no sinal</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li>Cria uma "linha direta" entre técnicos distantes</li>
+        <li>Permite monitorar a rede sem parar o tráfego</li>
+        <li>Tem função de segurança que desliga lasers automaticamente</li>
+        <li>Muito confiável (dura mais de 20 anos em uso contínuo)</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li>Não funciona com equipamentos de última geração (40G/100G)</li>
+        <li>Velocidade fixa de comunicação (não dá para aumentar)</li>
+        <li>Só envia dados em uma direção (no modelo Terminal)</li>
+        <li>Alguns modelos não permitem configuração remota</li>
+    </ul>
+</section>
+
+<!-- QUIZ -->
+<section class="mb-5">
+    <h2>Questionário</h2>
+    <p>Responda escolhendo a alternativa correta:</p>
+
+    <div class="card p-4">
+        <ol>
+
+            <li class="mb-3">
+                O SCMT-4B5L é responsável por:
+                <div class="quiz-option">A) Gerenciamento de rede IP</div>
+                <div class="quiz-option">B) Comunicação interna e transporte de sinais</div>
+                <div class="quiz-option">C) Fornecer energia para o chassi</div>
+            </li>
+
+            <li class="mb-3">
+                O SCMT-4B5L liga quando:
+                <div class="quiz-option">A) O usuário aperta o botão frontal</div>
+                <div class="quiz-option">B) O chassi é energizado</div>
+                <div class="quiz-option">C) É conectado a um computador</div>
+            </li>
+
+            <li class="mb-3">
+                Quais são seus principais conectores?
+                <div class="quiz-option">A) HDMI e USB</div>
+                <div class="quiz-option">B) Portas ópticas internas e conector traseiro</div>
+                <div class="quiz-option">C) VGA e DisplayPort</div>
+            </li>
+
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SCMT-4B5L</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

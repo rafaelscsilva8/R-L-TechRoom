@@ -34,8 +34,17 @@
         }
 
         .card { border-radius: 12px; }
-        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
-        .quiz-option:hover { background:#f5f5f5; }
+
+        .quiz-option {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: 0.2s;
+        }
+        .quiz-option:hover {
+            background: #f5f5f5;
+        }
     </style>
 </head>
 
@@ -57,7 +66,34 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
                 <div class="dropdown-menu fade-down m-0">
-                    <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">ROAC281SAH</a>
                 </div>
             </div>
             <a href="../contato.html" class="nav-item nav-link">Contato</a>
@@ -87,19 +123,14 @@
 <main class="container my-5">
 
 <section class="mb-5">
-    <h2>O que é o PADTEC DCM17001?</h2>
+    <h2>1. O que é o PADTEC DCM17001?</h2>
 
     <p>
-        Antes de entender o que ele é, precisamos entender o que ele <strong>não é</strong>:
-    </p>
+        O DCM é um “corrigidor de sinal”.
+        Mais especificamente, ele corrige um efeito chamado dispersão, que faz com que a luz se espalhe e o sinal chegue “embaralhado”.
 
-    <ul>
-        <li>Não é um switch</li>
-        <li>Não é um roteador</li>
-        <li>Não distribui internet</li>
-        <li>Não tem portas de rede</li>
-        <li>Não tem interface web ou IP</li>
-    </ul>
+        O modelo 17001 corrige até 1700 unidades desse problema (ps/nm).
+    </p>
 
     <p>
         O <strong>Padtec DCM17001</strong> é um <strong>Módulo de Compensação de Dispersão</strong>.
@@ -130,15 +161,15 @@
 </section>
 
 <section class="mb-5">
-    <h2>Como ligar</h2>
+    <h2>2. Como ligar</h2>
 
     <p>Por ser um dispositivo totalmente passivo:</p>
 
     <ul>
-        <li>✔ Não tem energia elétrica</li>
-        <li>✔ Não tem botão</li>
-        <li>✔ Não tem configuração</li>
-        <li>✔ Basta plugar as fibras</li>
+        <li>Não tem energia elétrica</li>
+        <li>Não tem botão</li>
+        <li>Não tem configuração</li>
+        <li>Basta plugar as fibras</li>
     </ul>
 
     <h4>Como usar na prática:</h4>
@@ -153,7 +184,7 @@
 </section>
 
 <section class="mb-5">
-    <h2>Como acessar a configuração</h2>
+    <h2>3. Como acessar a configuração</h2>
 
     <p>
         Ele <strong>não possui nenhum tipo de configuração</strong>, interface, IP ou console.
@@ -165,40 +196,39 @@
     </p>
 </section>
 
-    <h2>Mini questionário</h2>
+<h2>Mini questionário</h2>
 
-    <div class="card p-4">
-        <ol>
-            <li class="mb-3">
-                O DCM17001 é um:
-                <div class="quiz-option">A) Switch</div>
-                <div class="quiz-option">B) Roteador</div>
-                <div class="quiz-option">C) Módulo óptico passivo</div>
-            </li>
+<div class="card p-4" id="questionario">
+    <ol>
+        <li class="mb-3">
+            O DCM17001 é um:
+            <div class="quiz-option">A) Switch</div>
+            <div class="quiz-option">B) Roteador</div>
+            <div class="quiz-option">C) Módulo óptico passivo</div>
+        </li>
 
-            <li class="mb-3">
-                Para que serve a compensação de dispersão?
-                <div class="quiz-option">A) Aumentar a potência do sinal</div>
-                <div class="quiz-option">B) Corrigir a luz que se espalha em longas distâncias</div>
-                <div class="quiz-option">C) Criar VLANs</div>
-            </li>
+        <li class="mb-3">
+            Para que serve a compensação de dispersão?
+            <div class="quiz-option">A) Aumentar a potência do sinal</div>
+            <div class="quiz-option">B) Corrigir a luz que se espalha em longas distâncias</div>
+            <div class="quiz-option">C) Criar VLANs</div>
+        </li>
 
-            <li class="mb-3">
-                O DCM possui configuração via navegador?
-                <div class="quiz-option">A) Sim</div>
-                <div class="quiz-option">B) Não, ele é totalmente passivo</div>
-                <div class="quiz-option">C) Apenas via cabo console</div>
-            </li>
+        <li class="mb-3">
+            O DCM possui configuração via navegador?
+            <div class="quiz-option">A) Sim</div>
+            <div class="quiz-option">B) Não, ele é totalmente passivo</div>
+            <div class="quiz-option">C) Apenas via cabo console</div>
+        </li>
 
-            <li class="mb-3">
-                Que tipo de porta ele utiliza?
-                <div class="quiz-option">A) RJ45</div>
-                <div class="quiz-option">B) LC/UPC óptico</div>
-                <div class="quiz-option">C) HDMI</div>
-            </li>
-        </ol>
-    </div>
-</section>
+        <li class="mb-3">
+            Que tipo de porta ele utiliza?
+            <div class="quiz-option">A) RJ45</div>
+            <div class="quiz-option">B) LC/UPC óptico</div>
+            <div class="quiz-option">C) HDMI</div>
+        </li>
+    </ol>
+</div>
 
 </main>
 
@@ -208,6 +238,66 @@
         <small>R&L Techroom — ETEC Takashi Morita</small>
     </div>
 </footer>
+
+<!-- SCRIPT CORRIGIDO DO QUIZ -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const corretas = ["C", "B", "B", "B"]; 
+
+    const questionario  = document.getElementById("questionario");
+    const perguntas     = questionario.querySelectorAll("ol > li");
+
+    perguntas.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll(".quiz-option");
+
+        opcoes.forEach(opcao => {
+            opcao.addEventListener("click", () => {
+
+                if (pergunta.classList.contains("respondida")) return;
+                pergunta.classList.add("respondida");
+
+                const letraSelecionada = opcao.innerText.trim().substring(0, 1);
+
+                console.log(`Selecionada: ${letraSelecionada}`);
+                console.log(`INDEX: ${index}`);
+                console.log(`Correta: ${corretas[index]}`);
+                console.log(`Correta: ${corretas}`);
+                console.log(`{corretas[0]: ${corretas[0]}`);
+                console.log(`{corretas[1]: ${corretas[1]}`);
+                console.log(`{corretas[2]: ${corretas[2]}`);
+                console.log('\n');
+                console.log(pergunta);
+
+                if (letraSelecionada === corretas[index]) {
+
+                    opcao.style.background = "#28a745";
+                    opcao.style.color = "white";
+                    opcao.style.border = "1px solid #1e7e34";
+
+                } else {
+
+                    opcao.style.background = "#dc3545";
+                    opcao.style.color = "white";
+                    opcao.style.border = "1px solid #b02a37";
+
+                    opcoes.forEach(item => {
+                        const letra = item.innerText.trim().substring(0, 1);
+
+                        if (letra === corretas[index]) {
+                            item.style.background = "#28a745";
+                            item.style.color = "white";
+                            item.style.border = "1px solid #1e7e34";
+                        }
+                    });
+
+                }
+
+            });
+        });
+    });
+});
+</script>
 
 </body>
 </html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>T25DC35 — Transponder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo T25DC35 (transponder 2,5 Gb/s)." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+        .card { border-radius: 12px; }
+        .quiz-option {
+            padding: 8px 12px;
+            margin: 4px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .quiz-option:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>    
+
+<!-- HERO -->
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">T25DC35</h1>
+                <p class="lead">Conversor de luz para fibra óptica — converte sinais 1310 nm para canal DWDM 35 com regeneração de sinal.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/T25DC35-4BRE4L.png" class="img-fluid rounded shadow" alt="T25DC35 Module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+
+<section class="mb-5">
+    <h2>1. O que é o T25DC354BRE4L?</h2>
+    <p>
+        É um conversor de sinal de fibra óptica que permite que a internet ou os dados do seu equipamento (como um roteador ou servidor) viajem por longas distâncias em uma rede de fibra óptica de alta capacidade. Ele converte a "luz" do seu equipamento (1310 nm) para uma "cor especial" (canal 35) que pode viajar junto com muitos outros sinais na mesma fibra.
+    </p>
+</section>
+
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>
+        Pense nele como um tradutor automático de idiomas para luz.
+    </p>
+    <ul>
+        <li>Seu equipamento "fala" em 1310 nm (como português).</li>
+        <li>O T25DC354BRE4L traduz essa "fala" para o canal 35 (como japonês) para que o sinal possa viajar por uma "autoestrada de luz" (fibra DWDM).</li>
+        <li>Na outra ponta, ele traduz de volta para 1310 nm para que o equipamento destino entenda.</li>
+        <li>No caminho, ele ainda reforça o sinal, corrige erros e monitora a velocidade — tudo isso ao mesmo tempo, na ida e na volta.</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <div>
+        <p>Tem 4 "entradas de fibra" na frente, todas do mesmo tipo (SC-APC):</p>
+        <ul>
+            <li><strong>IN2:</strong> Onde você conecta o cabo que vem do seu equipamento.</li>
+            <li><strong>OUT2:</strong> Onde sai o sinal de volta para seu equipamento.</li>
+            <li><strong>IN1:</strong> Onde entra o sinal da rede de longa distância.</li>
+            <li><strong>OUT1:</strong> Onde sai o sinal para a rede de longa distância.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>Funciona com -48V (energia padrão de telecom).</li>
+        <li>Consome pouca energia (menos que uma lâmpada de LED).</li>
+        <li>Pode funcionar por mais de 20 anos sem quebrar.</li>
+        <li>Opera em temperaturas entre -5°C e 45°C (como um ambiente climatizado).</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>Use uma pulseira antiestática.</li>
+        <li>Encaixe o aparelho no rack de telecomunicações (tamanho 4U).</li>
+        <li>Conecte os cabos de fibra nos lugares certos.</li>
+        <li>Pronto! Ele já começa a funcionar sozinho.</li>
+    </ol>
+</section>
+
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>Não tem botão de liga/desliga.</li>
+        <li>Ele liga automaticamente quando é colocado no rack com energia.</li>
+        <li>A luz POWER verde acende para mostrar que está funcionando.</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>Não precisa configurar nada.</li>
+        <li>É plug-and-play: conectou, funcionou.</li>
+        <li>Já vem ajustado para longa distância e alta qualidade.</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Sempre use pulseira antiestática ao tocar.</li>
+        <li>Mantenha os conectores limpos (com álcool isopropílico).</li>
+        <li>Nunca olhe diretamente para as saídas de luz (mesmo sendo invisível).</li>
+        <li>Observe as luzinhas:
+            <ul>
+                <li>Verde = tudo normal</li>
+                <li>Amarelo = sinal fraco (atenção)</li>
+                <li>Vermelho = problema (falta sinal ou falha)</li>
+            </ul>
+        </li>
+        <li>Tampe as portas quando não estiver usando.</li>
+    </ul>
+</section>
+
+
+<section class="mb-5">
+
+    <h2>9. Vantagens</h2>
+    <ul>
+        <li>Permite comunicação de longa distância com alta qualidade.</li>
+        <li>Regenera o sinal (chega limpo e forte no destino).</li>
+        <li>Bidirecional: faz ida e volta no mesmo aparelho (economiza espaço e fibra).</li>
+        <li>Monitora automaticamente a qualidade e velocidade do sinal.</li>
+        <li>Compatível com vários tipos de equipamentos (Ethernet, Fibre Channel, STM-1/4/16).</li>
+    </ul>
+
+    <h2>10. Limitações</h2>
+    <ul>
+        <li>Só funciona até 2,5 Gb/s (não serve para velocidades mais altas, como 10G ou 100G).</li>
+        <li>Os conectores precisam de cuidado com sujeira.</li>
+        <li>Depende de fibra óptica de boa qualidade.</li>
+        <li>Não tem filtro de entrada (em alguns casos pode captar interferências).</li>
+    </ul>
+</section>
+
+<!-- QUIZ -->
+<section class="mb-5">
+    <h2>Mini Questionário</h2>
+    <p>Responda as perguntas escolhendo apenas uma alternativa:</p>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Para que canal DWDM o T25DC35 converte o sinal?
+                <div class="quiz-option">A) Canal 30</div>
+                <div class="quiz-option">B) Canal 35</div>
+                <div class="quiz-option">C) Canal 34</div>
+            </li>
+
+            <li class="mb-3">
+                Qual analogia é usada para explicar o funcionamento do T25DC35?
+                <div class="quiz-option">A) Como um tradutor automático de idiomas para luz.</div>
+                <div class="quiz-option">B) Como um conversor de energia elétrica.</div>
+                <div class="quiz-option">C) Como um amplificador de rádio.</div>
+            </li>
+
+            <li class="mb-3">
+                O que significa quando a luz POWER do T25DC35 está verde?
+                <div class="quiz-option">A) O equipamento está desligado.</div>
+                <div class="quiz-option">B) O equipamento está funcionando normalmente.</div>
+                <div class="quiz-option">C) Há um problema no sinal.</div>
+            </li>
+
+            <li class="mb-3">
+                O T25DC35 possui botão de liga/desliga?
+                <div class="quiz-option">A) Sim</div>
+                <div class="quiz-option">B) Não</div>
+            </li>
+
+            <li class="mb-3">
+                Qual é uma das compatibilidades listadas do T25DC35?
+                <div class="quiz-option">A) Apenas Ethernet 10G.</div>
+                <div class="quiz-option">B) Vários tipos (Ethernet, Fibre Channel, STM-1/4/16).</div>
+                <div class="quiz-option">C) Somente fibra multimodo.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4 text-center">
+    <p class="mb-1">Guia simples — T25DC35</p>
+    <small>R&L Techroom — ETEC Takashi Morita</small>
+</footer>
+
+</body>
+</html>

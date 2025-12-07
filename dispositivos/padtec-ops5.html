@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>PADTEC OPS5A9D1 — Guia de Gerenciamento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Guia simples e didático do Padtec OPS5A9D1. Entenda sua função como sistema de proteção de rota e suas portas de gerência."/>
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-rota.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        }
+        
+        .led-panel-ops {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+        .led-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .led-on { background-color: #28a745; box-shadow: 0 0 5px #28a745; }
+        .led-alert { background-color: #ffc107; box-shadow: 0 0 5px #ffc107; }
+        .led-off { background-color: #adb5bd; }
+        
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">PADTEC OPS5A9D1</h1>
+                <p class="lead">
+                    A "caixa de proteção automática para internet de fibra óptica". Um desvio de emergência que evita quedas de conexão.
+                </p>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="../img/Optical Protection Sistem OPS5A9D1.png" class="img-fluid rounded shadow" alt="Imagem do Sistema de Proteção Padtec OPS5A9D1">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é?</h2>
+    <p>É uma "caixa de proteção automática para internet de fibra óptica". Pense nela como um "desvio de emergência" em uma estrada: se o caminho principal ficar bloqueado, o tráfego é automaticamente redirecionado para uma estrada alternativa em menos de um piscar de olhos. Essa caixinha faz isso com sinais de internet: se uma fibra falhar, ela muda instantaneamente para uma fibra reserva, evitando que a internet caia.</p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>Funciona como um "sinaleiro inteligente para luz" dentro dos cabos de fibra:</p>
+    <ul>
+        <li>Ela fica escutando duas fibras ópticas: a principal e a de reserva.</li>
+        <li>Se a fibra principal tiver uma queda brusca de sinal (como se o cabo fosse cortado ou danificado), ela automaticamente troca para a fibra reserva.</li>
+        <li>Essa troca é super rápida (menos de 15 milésimos de segundo) — tão rápida que ninguém percebe a mudança.</li>
+        <li>Você também pode trocar manualmente com um botão na frente ou controlar à distância pelo computador da central.</li>
+        <li>Além de proteger, ela também divide o sinal de saída em duas partes iguais para enviar para dois lugares diferentes.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e conectores do dispositivo</h2>
+    
+    <h4>Onde conectar os cabos de fibra (conectores azuis/verdes):</h4>
+    <ul>
+        <li><strong>Entrada 1 e Entrada 2:</strong> Para as duas fibras (principal e reserva).</li>
+        <li><strong>Entrada do Equipamento:</strong> Onde chega o sinal que queremos proteger.</li>
+        <li><strong>Saída para o Equipamento:</strong> De onde sai o sinal protegido (da fibra que está funcionando).</li>
+        <li><strong>Saída 1 e Saída 2:</strong> Para enviar o sinal dividido (metade para cada lugar).</li>
+    </ul>
+    
+    <h4>Onde conectar fios e energia:</h4>
+    <ul>
+        <li><strong>Tomada grande (DB25):</strong> Para ligar em sirenes ou luzes de alarme (avisa se algo errado).</li>
+        <li><strong>2 tomadas de telefone pequenas (RJ-11):</strong> Para comunicação com o sistema de monitoramento.</li>
+        <li><strong>Conector de Energia:</strong> Usa -48 Volts (tomada especial de equipamentos de telefonia).</li>
+    </ul>
+    
+    <h4>Na parte da frente:</h4>
+    
+    <h5>Botões:</h5>
+    <ul>
+        <li><strong>IN1/IN2</strong> - para trocar manualmente entre as fibras</li>
+        <li><strong>AUTO</strong> - liga/desliga o modo automático</li>
+        <li><strong>Dois botões giratórios:</strong> Para ajustar a sensibilidade de cada fibra.</li>
+    </ul>
+    
+    <h5>Várias luzinhas (LEDs):</h5>
+    <ul>
+        <li><strong>IN1 e IN2</strong> - mostram qual fibra está sendo usada</li>
+        <li><strong>AUTO</strong> - indica se está no modo automático</li>
+        <li><strong>Barra de 16 luzinhas</strong> - mostra se o sinal está forte (verde/amarelo) ou fraco (apagado)</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características elétricas</h2>
+    <ul>
+        <li><strong>Voltagem necessária:</strong> -48 Volts (padrão de central telefônica, não é tomada de parede comum).</li>
+        <li><strong>Consumo de energia:</strong> Muito baixo - parecido com uma lâmpada de LED de 5W.</li>
+        <li><strong>Velocidade de troca:</strong> Menos de 15 milissegundos (mais rápido que um piscar de olhos).</li>
+        <li><strong>Durabilidade:</strong> Projetada para funcionar por 200.000 horas (mais de 22 anos).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como instalar?</h2>
+    <ol>
+        <li><strong>Coloque no rack:</strong> Encaixe no espaço de 1U (uma unidade de altura, bem fininha) e aparafuse.</li>
+        <li><strong>Conecte os cabos de fibra</strong> nas portas corretas (principal na Entrada 1, reserva na Entrada 2).</li>
+        <li><strong>Conecte os cabos de comunicação</strong> (as duas tomadas de telefone RJ-11).</li>
+        <li><strong>Conecte a energia (-48V).</strong></li>
+        <li><strong>Conecte os alarmes</strong> (se quiser, na tomada grande DB25).</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como ligar?</h2>
+    <ol>
+        <li>Ligue a energia (-48V).</li>
+        <li>Ajuste os dois botões giratórios na frente até a segunda luz verde da barra acender (para cada fibra).</li>
+        <li>Pressione o botão AUTO, a luz AUTO acende.</li>
+        <li><strong>Pronto!</strong> Agora ela está protegendo automaticamente sua conexão.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações básicas do dispositivo</h2>
+    <ul>
+        <li><strong>Ajuste de sensibilidade:</strong> Você precisa girar os botões AJT IN1 e AJT IN2 na instalação para "ensinar" ao equipamento qual é o nível normal do sinal.</li>
+        <li><strong>Modo Automático:</strong> Liga com o botão AUTO, ela troca sozinha em caso de falha.</li>
+        <li><strong>Modo Manual:</strong> Use o botão IN1/IN2 para escolher qual fibra usar.</li>
+        <li><strong>Travamento (LOCK):</strong> Pode ser travada remotamente para que ninguém mexa nos botões.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e boas práticas</h2>
+    
+    <h4>Para Retirar com Segurança:</h4>
+    <ol>
+        <li>Use pulseira antiestática (para não queimar o equipamento).</li>
+        <li>Desligue a energia.</li>
+        <li>Tire todos os cabos de fibra óptica.</li>
+        <li>Desconecte todos os cabos elétricos.</li>
+        <li>Solte os parafusos e retire do rack.</li>
+    </ol>
+    
+    <h4>O que Ela Avisa:</h4>
+    <ul>
+        <li>Se perdeu o sinal em alguma fibra</li>
+        <li>Se está no modo automático ou travado</li>
+        <li>Qual fibra está ativa</li>
+        <li>Se há problema com a energia</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li><strong>Pequena e Compacta:</strong> Ocupa pouco espaço no rack (só 1U).</li>
+        <li><strong>Proteção Instantânea:</strong> Troca de fibra em 15 ms, ninguém percebe a queda.</li>
+        <li><strong>Visualização Fácil:</strong> Barra de luzes mostra claramente se o sinal está bom.</li>
+        <li><strong>Várias Formas de Controlar:</strong> Manual, automático ou pelo computador da central.</li>
+        <li><strong>Pode Acionar Alarmes Externos:</strong> Tem saída para ligar sirenes ou luzes de alerta.</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li><strong>Precisa de Ajuste Manual:</strong> Na instalação, tem que girar os botões para calibrar, não é só plugar e usar.</li>
+        <li><strong>Energia Especial:</strong> Precisa de fonte de -48V (não funciona na tomada comum).</li>
+        <li><strong>Uso Específico:</strong> Esta versão (9 no código) é feita para fibra multimodo (geralmente usada dentro de prédios ou campus curtos) e não para fibra de longa distância.</li>
+        <li><strong>Sensibilidade Fixa:</strong> O limite para trocar de fibra é sempre 9 dB de queda, não dá para ajustar esse valor remotamente.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual a função principal do OPS5A9D1?
+                <div class="quiz-option">A) Multiplexar canais DWDM</div>
+                <div class="quiz-option">B) Proteger contra falhas de fibra óptica</div>
+                <div class="quiz-option">C) Amplificar sinal óptico</div>
+            </li>
+
+            <li class="mb-3">
+                Quanto tempo leva para trocar de fibra em caso de falha?
+                <div class="quiz-option">A) 1 segundo</div>
+                <div class="quiz-option">B) Menos de 15 milissegundos</div>
+                <div class="quiz-option">C) 5 minutos</div>
+            </li>
+
+            <li class="mb-3">
+                Que tipo de energia ela precisa?
+                <div class="quiz-option">A) 110V da tomada comum</div>
+                <div class="quiz-option">B) -48V DC (padrão telecom)</div>
+                <div class="quiz-option">C) Bateria 9V</div>
+            </li>
+
+            <li class="mb-3">
+                Para que servem os botões giratórios na frente?
+                <div class="quiz-option">A) Controlar o volume</div>
+                <div class="quiz-option">B) Ajustar a sensibilidade do sinal</div>
+                <div class="quiz-option">C) Selecionar o canal de TV</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — PADTEC OPS5A9D1</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

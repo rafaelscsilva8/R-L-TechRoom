@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SCMC-4B5L — Módulo de Gerenciamento Central</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo SCMC-4B5L (System Controller), o cérebro de gerenciamento e controle do chassi Padtec." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+        
+        pre.config-cli {
+            background: #0b1220;
+            color: #cfe8ff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #1f2a44;
+            font-size: 0.95rem;
+            font-family: Consolas, "Courier New", monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="../index.html" class="nav-item nav-link">Início</a>
+            <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="../imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">SCMC-4B5L</h1>
+                <p class="lead">A "caixa de comunicação de emergência" para redes de fibra óptica. Cria um canal separado só para controle, voz e monitoramento.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/4B5L.jpg" class="img-fluid rounded shadow" alt="SCMC-4B5L Module"> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é?</h2>
+    <p>É uma "caixa de comunicação de emergência" para redes de fibra óptica. Imagine que você tem uma rodovia de dados (a fibra óptica principal) e precisa de um "rádio walkie-talkie" para os operadores se comunicarem e gerenciarem essa rodovia, independentemente do tráfego normal. Essa caixa faz exatamente isso: cria um canal separado só para controle, voz e monitoramento, em uma cor de luz específica (1510 nm) que não atrapalha os dados principais.</p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <p>Funciona como um "tradutor e repetidor de mensagens" para a equipe de rede:</p>
+    <ul>
+        <li>Pega mensagens de texto e voz do computador de controle e as transforma em piscadas de luz especiais (1510 nm).</li>
+        <li>Envia essas piscadas por dois lados da fibra (Norte e Sul), como se fosse uma conversa em grupo.</li>
+        <li>Quando recebe piscadas de outras estações, transforma de volta em texto/voz para o operador.</li>
+        <li>Também pode conectar um telefone comum para que técnicos em locais diferentes conversem diretamente pela fibra.</li>
+        <li>É bidirecional e repetidor: pode pegar uma mensagem de um lado e repassar para o outro, estendendo a comunicação.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e conectores do dispositivo</h2>
+    
+    <h4>Onde conectar as fibras (conectores verdes/azuis):</h4>
+    <ul>
+        <li><strong>NORTH (Tx1/Rx1):</strong> Para a fibra que vai para o Norte.</li>
+        <li><strong>SOUTH (Tx2/Rx2):</strong> Para a fibra que vai para o Sul.</li>
+    </ul>
+    
+    <h4>Onde conectar acessórios:</h4>
+    <ul>
+        <li><strong>Tomada de telefone (RJ-11)</strong> - para ligar um telefone analógico e conversar.</li>
+        <li><strong>Tomada de linha (RJ-11)</strong> - para conectar à rede telefônica externa.</li>
+        <li><strong>Porta de dados (G.703)</strong> - para enviar dados lentos de controle.</li>
+        <li><strong>Porta serial</strong> - para configuração inicial no computador.</li>
+    </ul>
+    
+    <h4>Na parte da frente:</h4>
+    <p><strong>3 luzinhas de status:</strong></p>
+    <ul>
+        <li><strong>Verde (POWER):</strong> está ligado</li>
+        <li><strong>Vermelha (LOS1):</strong> perdeu sinal do lado Norte</li>
+        <li><strong>Vermelha (LOS2):</strong> perdeu sinal do lado Sul</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características elétricas</h2>
+    <ul>
+        <li><strong>Voltagem necessária:</strong> -48 Volts (recebe do próprio rack automaticamente).</li>
+        <li><strong>Consumo de energia:</strong> Muito baixo (cerca de 180 mA, como uma lâmpada LED pequena).</li>
+        <li><strong>Durabilidade:</strong> Feito para durar 200.000 horas (mais de 22 anos ligado).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como instalar?</h2>
+    <ol>
+        <li><strong>Coloque no rack:</strong> Encaixe no slot específico para "Canal de Supervisão".</li>
+        <li><strong>Conecte as fibras:</strong>
+            <ul>
+                <li>Fibra do lado Norte nas portas NORTH (Tx1/Rx1)</li>
+                <li>Fibra do lado Sul nas portas SOUTH (Tx2/Rx2)</li>
+            </ul>
+        </li>
+        <li><strong>Empurre totalmente o módulo</strong> para dentro do rack (a energia liga sozinha).</li>
+        <li><strong>Conecte o telefone ou cabos de dados</strong> se precisar.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como ligar?</h2>
+    <ol>
+        <li>Quando você empurra o módulo totalmente para dentro do rack, ele liga automaticamente.</li>
+        <li>A luz POWER (verde) acende.</li>
+        <li>Se as luzes LOS1 e LOS2 (vermelhas) estiverem apagadas, significa que está recebendo sinal dos dois lados.</li>
+        <li>Se alguma luz vermelha acender, significa que perdeu a comunicação naquele lado.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações básicas do dispositivo</h2>
+    <ul>
+        <li><strong>Praticamente nenhuma!</strong> É quase "plug and play".</li>
+        <li>Pode ser necessário conectar um computador via cabo serial na primeira vez para ajustes finos (usando um programa como o TeraTerm).</li>
+        <li><strong>Este modelo específico (SCMC4B5L) NÃO tem a função de "desligamento automático de laser" (ALS)</strong> - uma segurança que alguns modelos mais caros têm.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e boas práticas</h2>
+    
+    <h4>CUIDADO AO TIRAR DO RACK (IMPORTANTE):</h4>
+    <ol>
+        <li>Use pulseira antiestática.</li>
+        <li>NÃO pode desligar pelo software.</li>
+        <li>Para tirar com segurança: Puxe o módulo pela metade para fora do rack (isso corta a energia).</li>
+        <li>Só então desconecte os cabos de fibra.</li>
+        <li>Aí pode tirar completamente.</li>
+    </ol>
+    
+    <h4>O que ele NÃO faz (neste modelo):</h4>
+    <ul>
+        <li>Não envia alarmes para o computador central.</li>
+        <li>Não mostra métricas de consumo ou erros remotamente.</li>
+        <li>Você tem que olhar as luzinhas na frente para saber se está tudo bem.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li><strong>Canal de emergência sempre aberto:</strong> Permite comunicação mesmo se a rede de dados cair.</li>
+        <li><strong>Voz sobre fibra:</strong> Pode ligar um telefone e conversar diretamente com outros técnicos.</li>
+        <li><strong>Longo alcance:</strong> Versão "L" é feita para longas distâncias (até dezenas/quedas de quilômetros).</li>
+        <li><strong>Simples e confiável:</strong> Poucas peças móveis, dura muitos anos.</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li><strong>"Cego" para o sistema central:</strong> Não manda informações para a sala de controle - você precisa ir olhar no rack.</li>
+        <li><strong>Velocidade baixa:</strong> Só para voz e mensagens de texto pequenas (512 kb/s), não para vídeo ou dados pesados.</li>
+        <li><strong>Não serve para equipamentos modernos muito rápidos:</strong> Não funciona com transmissores de 40G ou 100G.</li>
+        <li><strong>Sem proteção ALS:</strong> Se a fibra for cortada, não desliga automaticamente os lasers potentes (precisa de outro modelo para isso).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual o papel principal do SCMC-4B5L?
+                <div class="quiz-option">A) Converter sinais ópticos para elétricos.</div>
+                <div class="quiz-option">B) Ser o módulo central de gerenciamento e controle do chassi.</div>
+                <div class="quiz-option">C) Amplificar o sinal de dados de cliente.</div>
+            </li>
+
+            <li class="mb-3">
+                Qual porta é essencial no SCMC para a conexão com o Sistema de Gerenciamento de Rede (NMS)?
+                <div class="quiz-option">A) Porta de Linha DWDM.</div>
+                <div class="quiz-option">B) Porta SFP+.</div>
+                <div class="quiz-option">C) Porta de Rede (Ethernet).</div>
+            </li>
+
+            <li class="mb-3">
+                Em uma arquitetura com redundância, qual é o objetivo de usar dois módulos SCMC?
+                <div class="quiz-option">A) Dobrar a capacidade de tráfego de dados.</div>
+                <div class="quiz-option">B) Garantir que o gerenciamento não seja perdido se um módulo falhar (Ativo/Standby).</div>
+                <div class="quiz-option">C) Aumentar o consumo de energia do chassi.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — SCMC-4B5L</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>

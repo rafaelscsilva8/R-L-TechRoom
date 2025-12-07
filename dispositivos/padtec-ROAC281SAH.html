@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
-    <title>PADTEC FAN GR — Guia Simples</title>
+    <title>PADTEC ROAC281SAH — Guia Simples</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Guia simples e didático do Padtec FAN GR. Entenda o que é, como funciona e para que serve este módulo de ventilação do chassi."/>
+    <meta name="description" content="Guia simples e didático do Padtec ROAC281SAH. Entenda o que é, como funciona e para que serve um Amplificador Raman."/>
     <link href="img/tecnologia.png" rel="icon" />
 
     <!-- Google Fonts & Bootstrap -->
@@ -41,7 +41,7 @@
 
 <body>
 
-<!-- Navbar padrão -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
@@ -63,7 +63,7 @@
                     <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
                     <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
                     <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
-                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
                     <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
                     <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
                     <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
@@ -84,7 +84,7 @@
                     <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
                     <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
                     <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
-                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
                 </div>
             </div>
             <a href="../contato.html" class="nav-item nav-link">Contato</a>
@@ -98,12 +98,14 @@
         <div class="row align-items-center gy-4">
             <div class="col-lg-6">
                 <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
-                <h1 class="display-5 mb-3">PADTEC FAN GR</h1>
-                <p class="lead">O "conjunto de coolers" inteligente que mantém os equipamentos Padtec refrigerados e protegidos contra superaquecimento.</p>
+                <h1 class="display-5 mb-3">PADTEC ROAC281SAH</h1>
+                <p class="lead">
+                    Um Amplificador Raman de 28 dBm com apenas um laser, usado para fortalecer sinais ópticos em longas distâncias.
+                </p>
             </div>
 
             <div class="col-lg-6 text-center">
-                <img src="../img/padtec-fangr.jpg" alt="PADTEC FAN GR" class="img-fluid rounded shadow">
+                <img src="../img/roac.jpg" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
@@ -111,149 +113,137 @@
 
 <main class="container my-5">
 
-
 <section class="mb-5">
-    <h2>1. O que é</h2>
+    <h2>1. O que é?</h2>
     <p>
-        O <strong>FAN GR</strong> é um módulo de ventilação, parecido com um <strong>"conjunto de coolers"</strong>, usado dentro dos equipamentos de telecomunicações da Padtec.
-        Ele serve para <strong>resfriar os aparelhos</strong> que esquentam bastante durante o funcionamento.
+        É um <strong>"reforçador de sinal de fibra óptica"</strong> usado pelas operadoras de internet/telefonia. Quando a luz que carrega seus dados viaja muito longe (centenas de km), ela fica fraca - este equipamento fortalece essa luz para que seus dados continuem viajando.
     </p>
 </section>
 
-<!-- Seção 2: Como funciona -->
 <section class="mb-5">
-    <h2>2. Como funciona</h2>
-    <p>
-        Ele funciona como um <strong>ventilador inteligente</strong>:
-    </p>
+    <h2>2. Como funciona?</h2>
     <ul>
-        <li>Tem <strong>vários ventiladores internos</strong>.</li>
-        <li>Se algum parar ou travar, o sistema percebe e <strong>dispara um aviso de falha</strong>.</li>
-        <li>Ele ajusta a <strong>velocidade automaticamente</strong> conforme a temperatura.</li>
-        <li>Ele <strong>conversa com o equipamento principal</strong> para informar temperatura, velocidade e possíveis problemas.</li>
+        <li>Recebe luz fraca com dados de um lado</li>
+        <li>Usa um laser interno para "dar energia" a essa luz</li>
+        <li>Solta luz fortalecida com os mesmos dados do outro lado</li>
+        <li><strong>Importante:</strong> Este modelo tem <strong>APENAS UM laser</strong> - se ele queimar, o equipamento para até ser consertado</li>
     </ul>
 </section>
 
-
 <section class="mb-5">
-    <h2>3. Portas e conectores</h2>
-    <p>
-        Na <strong>parte de trás</strong> ele tem:
-    </p>
+    <h2>3. Portas e Conectores</h2>
+    <p>Na frente tem <strong>dois conectores ópticos</strong>:</p>
     <ul>
-        <li><strong>Conexões de energia</strong> (ele usa energia –48 V, típica de telecom).</li>
-        <li><strong>Conectores de alarme</strong>, que funcionam como interruptores para avisar se o módulo falhou.</li>
+        <li><strong>IN:</strong> Entrada do sinal fraco</li>
+        <li><strong>OUT:</strong> Saída do sinal fortalecido</li>
     </ul>
-    <p>
-        É como se tivesse <strong>fios de "entrada de energia"</strong> e <strong>fios de "aviso"</strong>.
-    </p>
+    <p>Atrás tem <strong>um conector de energia para 48V</strong> (tomada especial).</p>
 </section>
 
-
 <section class="mb-5">
-    <h2>4. Características elétricas</h2>
+    <h2>4. Características Elétricas</h2>
     <ul>
-        <li>Funciona com energia entre <strong>-36 V e -60 V</strong>.</li>
-        <li>Consome pouca corrente (algo em torno de <strong>230 mA</strong>).</li>
-        <li>Os ventiladores internos usam 12 V, mas isso é gerado pela placa dele.</li>
+        <li><strong>Energia necessária:</strong> 48 Volts DC</li>
+        <li><strong>Consumo:</strong> Parecido com um modem grande</li>
+        <li><strong>Funciona</strong> em ambientes com ar-condicionado (não pode esquentar muito)</li>
     </ul>
 </section>
-
 
 <section class="mb-5">
     <h2>5. Como instalar</h2>
-    <p>
-        Instalar é simples:
-    </p>
     <ol>
-        <li>Encaixar o FAN GR no <strong>espaço certo do bastidor</strong>.</li>
-        <li>Conectar os <strong>cabos de energia na parte de trás</strong>.</li>
-        <li>Ligar a <strong>energia do bastidor</strong>.</li>
-        <li>Ele já começa a <strong>funcionar automaticamente</strong>.</li>
+        <li><strong>Sempre desligue</strong> antes de conectar</li>
+        <li>Conecte <strong>primeiro os cabos de fibra</strong> (IN e OUT)</li>
+        <li>Coloque no rack (armário de equipamentos)</li>
+        <li><strong>Depois</strong> ligue na energia 48V</li>
+        <li>ligue o laser <strong>aos poucos</strong> pelo computador</li>
     </ol>
 </section>
 
-
 <section class="mb-5">
     <h2>6. Como ligar</h2>
-    <p>
-        No painel frontal existe uma <strong>chave liga/desliga</strong>.
-        Quando a energia chega e a chave está ligada, o FAN GR inicia e acende um <strong>LED de power</strong>.
-    </p>
+    <ol>
+        <li>Técnico conecta tudo (cabos + energia)</li>
+        <li>Usa software no computador para "acordar" o laser</li>
+        <li>O laser liga <strong>gradualmente</strong> (como acelerar um carro aos poucos)</li>
+        <li>As luzinhas da frente mostram se está funcionando</li>
+    </ol>
 </section>
 
-
 <section class="mb-5">
-    <h2>7. Configurações básicas</h2>
-    <p>
-        A <strong>única configuração</strong> é o <strong>DIP Switch</strong>, um conjunto de mini chavinhas na frente.
-    </p>
-    <p>
-        Isso serve apenas para dizer ao sistema: <strong>"Em qual posição/slot do bastidor o FAN está instalado"</strong>.
-        Cada FAN precisa ter um <strong>número diferente</strong>.
-    </p>
-</section>
-
-
-<section class="mb-5">
-    <h2>8. Manutenção e boas práticas</h2>
+    <h2>7. Configurações Básicas</h2>
+    <p>Feitas <strong>só por técnicos</strong> via computador:</p>
     <ul>
-        <li>Fazer uma <strong>inspeção visual uma vez por ano</strong> para ver se os ventiladores estão limpos e girando bem.</li>
-        <li><strong>Retirar apenas durante uma janela de manutenção</strong>, pois sem ele os outros equipamentos podem superaquecer.</li>
-        <li>Manter a <strong>chave e o fusível em bom estado</strong>.</li>
+        <li>Ajustam a <strong>força do laser</strong></li>
+        <li>Configuram <strong>avisos</strong> (se algo errado acontecer)</li>
+        <li>Monitoram se está funcionando bem</li>
     </ul>
+    <p><em>Você não precisa saber configurar - isso é com a operadora.</em></p>
 </section>
 
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <p><strong>Para técnicos:</strong></p>
+    <ul>
+        <li>Sempre use <strong>pulseira antiestática</strong> ao manusear</li>
+        <li><strong>Mantenha os conectores limpos</strong> (poeira atrapalha)</li>
+        <li><strong>Monitore regularmente</strong> pelo software</li>
+        <li>Tenha <strong>uma peça reserva em estoque</strong> (já que não tem backup interno)</li>
+    </ul>
+    <p><strong>Para usuários:</strong> Não mexa - é equipamento da operadora.</p>
+</section>
 
 <section class="mb-5">
-    
     <h2>9. Vantagens</h2>
     <ul>
-        <li>Ajuda a <strong>evitar superaquecimento</strong>.</li>
-        <li><strong>Detecta falhas automaticamente</strong>.</li>
-        <li>Permite <strong>controle de velocidade</strong>.</li>
-        <li>É <strong>fácil de instalar e substituir</strong>.</li>
-    </ul>
-    
-    <h2>10. Limitações</h2>
-    <ul>
-        <li><strong>Não faz nada além de ventilar</strong> (não processa, não transmite dados).</li>
-        <li><strong>Não pode ser retirado sem planejamento</strong>, pois outros módulos dependem dele para ficar frios.</li>
+        <li><strong>Funciona bem</strong> para reforçar sinais</li>
+        <li><strong>Mais simples</strong> que modelos com backup</li>
+        <li><strong>Mais econômico</strong> para a operadora comprar</li>
+        <li><strong>Faz seu dado viajar mais longe</strong> sem perder qualidade</li>
     </ul>
 </section>
 
-<!-- Mini questionário -->
+<section class="mb-5">
+    <h2>10. Limitações</h2>
+    <ul>
+        <li><strong>Sem backup interno</strong> - se quebrar, para tudo</li>
+        <li><strong>Precisa de conserto rápido</strong> quando falha</li>
+        <li><strong>Exige monitoramento constante</strong> dos técnicos</li>
+        <li><strong>Não é à prova de falhas</strong> - é um equipamento simples</li>
+    </ul>
+</section>
+
 <section class="mb-5">
     <h2>Mini questionário</h2>
 
     <div class="card p-4">
         <ol>
             <li class="mb-3">
-                Para que serve o FAN GR?
-                <div class="quiz-option">A) Transmitir dados de internet</div>
-                <div class="quiz-option">B) Resfriar os equipamentos do rack</div>
-                <div class="quiz-option">C) Amplificar sinais ópticos</div>
+                O ROAC281SAH é um:
+                <div class="quiz-option">A) Switch de rede</div>
+                <div class="quiz-option">B) Roteador óptico</div>
+                <div class="quiz-option">C) Amplificador Raman</div>
             </li>
 
             <li class="mb-3">
-                O que o DIP Switch configura?
-                <div class="quiz-option">A) A velocidade dos ventiladores</div>
-                <div class="quiz-option">B) A posição do módulo no rack</div>
-                <div class="quiz-option">C) A temperatura máxima</div>
+                Quantos lasers principais tem este modelo?
+                <div class="quiz-option">A) 2 lasers com 2 reservas</div>
+                <div class="quiz-option">B) 4 lasers</div>
+                <div class="quiz-option">C) Apenas 1 laser (sem reserva)</div>
             </li>
 
             <li class="mb-3">
-                Por que não se deve retirar o FAN GR sem planejamento?
-                <div class="quiz-option">A) Porque ele controla a internet</div>
-                <div class="quiz-option">B) Porque os outros equipamentos podem superaquecer</div>
-                <div class="quiz-option">C) Porque ele armazena dados importantes</div>
+                Que voltagem ele precisa?
+                <div class="quiz-option">A) 110V AC</div>
+                <div class="quiz-option">B) 48V DC</div>
+                <div class="quiz-option">C) 12V DC</div>
             </li>
 
             <li class="mb-3">
-                Que tipo de energia ele utiliza?
-                <div class="quiz-option">A) 110V</div>
-                <div class="quiz-option">B) –48V (telecomunicações)</div>
-                <div class="quiz-option">C) 24V DC</div>
+                Quem deve fazer a configuração deste equipamento?
+                <div class="quiz-option">A) O usuário final em casa</div>
+                <div class="quiz-option">B) Técnicos especializados da operadora</div>
+                <div class="quiz-option">C) Não precisa de configuração</div>
             </li>
         </ol>
     </div>
@@ -263,7 +253,7 @@
 
 <footer class="bg-dark text-white py-4">
     <div class="container text-center">
-        <p class="mb-1">Guia simples — PADTEC FAN GR</p>
+        <p class="mb-1">Guia simples — PADTEC ROAC281SAH</p>
         <small>R&L Techroom — ETEC Takashi Morita</small>
     </div>
 </footer>

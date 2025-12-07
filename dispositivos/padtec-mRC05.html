@@ -7,7 +7,7 @@
     <meta name="description" content="Guia simples e didático do PADTEC mRC05-1A. Entenda o que é, como funciona e para que serve este módulo de gerenciamento."/>
     <link href="img/tecnologia.png" rel="icon" />
 
-    <!-- Google Fonts & Bootstrap (mesmos do modelo) -->
+    <!-- Google Fonts & Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +22,6 @@
             padding: 60px 0;
         }
 
-        /* ESTILO DO CLI (igual ao print que você enviou) */
         pre.config-cli {
             background: #0b1220;
             color: #cfe8ff;
@@ -38,14 +37,13 @@
         .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
         .quiz-option:hover { background:#f5f5f5; }
 
-        /* pequenas adaptações visuais para consistência */
         body { font-family: "Heebo", Arial, sans-serif; }
     </style>
 </head>
 
 <body>
 
-<!-- Navbar padrão (igual ao modelo original) -->
+<!-- Navbar padrão -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
@@ -61,12 +59,34 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
                 <div class="dropdown-menu fade-down m-0">
-                    <a href="padtech-s5248.html" class="dropdown-item">PADTECH S5248-24P</a>
-                    <a href="padtec-DCM17001.html" class="dropdown-item">PADTEC DCM17001</a>
-                    <a href="padtec-mpm4848.html" class="dropdown-item">PADTEC MPM 48/48-3</a>
-                    <a href="padtec-fangr.html" class="dropdown-item">PADTEC FAN GR</a>
-                    <a href="padtec-loac211jah.html" class="dropdown-item">PADTEC LOAC211JAH</a>
-                    <a href="padtec-mrc05-1a.html" class="dropdown-item active">PADTEC mRC05-1A</a>
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
                 </div>
             </div>
             <a href="../contato.html" class="nav-item nav-link">Contato</a>
@@ -82,12 +102,11 @@
                 <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
                 <h1 class="display-5 mb-3">PADTEC mRC05-1A</h1>
                 <p class="lead">
-                    Módulo de gerenciamento e interface de rede do chassi Padtec — permite acesso local (console) e remoto (Ethernet) para monitorar e controlar os equipamentos.
+                    O "porteiro inteligente" da rede de monitoramento. Centraliza informações dos equipamentos e economiza endereços IP.
                 </p>
             </div>
 
             <div class="col-lg-6 text-center">
-                <!-- imagem padrão do site -->
                 <img src="../img/mRC05.jpg" class="img-fluid rounded shadow" alt="PADTEC mRC05-1A">
             </div>
         </div>
@@ -97,91 +116,116 @@
 <main class="container my-5">
 
 <section class="mb-5">
-    <h2>O que é o PADTEC mRC05-1A?</h2>
-    <p>
-        O <strong>mRC05-1A</strong> é um módulo de gerenciamento e comunicação usado em racks Padtec. Ele funciona como uma interface para o operador: permite acessar o sistema via <strong>porta console</strong> (serial) ou via <strong>portas Ethernet</strong>, monitorar alarmes, ver o status das placas e integrar o chassi com ferramentas de gerenciamento da rede.
-    </p>
-
-    <p>
-        **Importante:** ele NÃO é um switch nem um roteador de internet para usuários finais. Sua função é administrar e monitorar o sistema dentro do chassi.
-    </p>
-
-    <h4>Explicando como se você não soubesse nada</h4>
-    <p>
-        Imagine que o rack Padtec é uma pequena cidade com vários equipamentos (placas). O <strong>mRC05-1A</strong> é o "centro administrativo": através dele os técnicos verificam se tudo está funcionando, recebem alarmes e configuram parâmetros quando necessário.
-    </p>
+    <h2>1. O que é?</h2>
+    <p>É uma "caixa conectadora inteligente" usada em redes de empresas de telecomunicações. Sua função principal é ser um ponto de encontro para o sistema de monitoramento. Em vez de cada equipamento (como roteadores e switches) falar direto com o sistema central, eles falam primeiro com esta caixa. Ela organiza todas as mensagens e as envia adiante, economizando endereços de internet (IPs).</p>
 </section>
 
 <section class="mb-5">
-    <h2>Principais portas e elementos frontais</h2>
-
+    <h2>2. Como funciona?</h2>
+    <p>Funciona como um "porteiro de prédio" para a rede de monitoramento.</p>
+    
     <ul>
-        <li><strong>Power (LED)</strong> — indica que o módulo está ligado.</li>
-        <li><strong>Console (DB9)</strong> — porta serial para acesso direto via cabo (configuração local / emergência).</li>
-        <li><strong>Eth1 – Eth5 (RJ-45)</strong> — portas Ethernet para conectar o módulo à rede de gerenciamento ou a outros equipamentos.</li>
+        <li>Vários equipamentos são conectados a ele com cabos de rede.</li>
+        <li>Ele recebe informações de todos eles (como "estou funcionando" ou "tive um erro").</li>
+        <li>Ele reúne essas informações e as envia, de forma organizada, para o computador principal que monitora a rede.</li>
+        <li>Para fazer isso, ele usa "regras de trânsito" inteligentes (protocolos como OSPF) para escolher o melhor caminho para os dados.</li>
     </ul>
-
-    <p>Na foto do módulo aparecem cinco portas Ethernet (Eth1 a Eth5) e a porta console — características típicas desse módulo de gerenciamento.</p>
 </section>
 
 <section class="mb-5">
-    <h2>Para que serve na prática?</h2>
-
-    <ol>
-        <li>Permitir que técnicos acessem configurações das placas do chassi;</li>
-        <li>Entregar informações de status (temperatura, alarmes, potência óptica) a sistemas de supervisão;</li>
-        <li>Permitir integração com o NOC (centro de operações de rede) para monitoramento remoto;</li>
-        <li>Executar atualizações de firmware e tarefas de manutenção.</li>
-    </ol>
-</section>
-
-<section class="mb-5">
-    <h2>Como conectar e usar (passo a passo para leigos)</h2>
-
-    <p>Passo a passo simples — bem prático:</p>
-    <ol>
-        <li>Conecte um cabo serial (DB9) do seu computador à porta <strong>Console</strong> e abra um terminal (ex.: Putty) com velocidade padrão (ex.: 9600 bps) — isso permite acessar diretamente o módulo.</li>
-        <li>Para gerenciamento em rede, conecte um cabo de rede (RJ-45) em <strong>Eth1</strong> e em um switch de gerenciamento; o técnico pode então acessar via SSH/Telnet/HTTP conforme a configuração da rede.</li>
-        <li>Ligue o chassi e verifique se o LED <strong>POWER</strong> está aceso.</li>
-        <li>Se houver falhas, o módulo exibirá mensagens/alertas para orientar o técnico.</li>
-    </ol>
-
-    <p><em>Obs.:</em> Usuários comuns não precisam mexer — deixe a manutenção para o técnico da rede.</p>
-</section>
-
-<section class="mb-5">
-    <h2>Configurações básicas (caixa CLI explicativa)</h2>
-
-    <p>O módulo permite acesso via console/terminal. Abaixo deixei exemplos genéricos (caixa de estilo igual ao modelo) — esses comandos são ilustrativos para mostrar o tipo de operação que o técnico faz.</p>
-
-    <pre class="config-cli">
-# Acesso via console (exemplo ilustrativo)
-login: admin
-Password: ****
-
-# Consultas típicas
-show system status
-show interfaces
-show alarms
-
-# Configuração simples de IP na interface de gerenciamento
-configure terminal
-interface eth1
- ip address 192.168.100.10 255.255.255.0
- no shutdown
-exit
-write memory
-    </pre>
-</section>
-
-<section class="mb-5">
-    <h2>Dicas rápidas para leigos</h2>
-
+    <h2>3. Portas e conectores do dispositivo</h2>
+    
+    <h4>Na Frente:</h4>
     <ul>
-        <li>Não desconecte cabos sem orientação do responsável técnico.</li>
-        <li>Se o módulo apresentar falhas, anote o LED/erro e contate o suporte.</li>
-        <li>Use a porta console apenas se souber como usar terminal serial; caso contrário, peça ajuda.</li>
-        <li>Mantenha documentação e endereços IP atualizados para o time de operação.</li>
+        <li><strong>5 Portas de Internet (RJ-45):</strong> Iguais às da TV a cabo ou do computador. Aqui você conecta os equipamentos que quer monitorar.</li>
+        <li><strong>1 Porta de Configuração (DB9):</strong> Uma porta retangular, mais antiga. Só é usada uma vez, no início, para configurar a caixa usando um notebook especial.</li>
+        <li><strong>1 Luz de Ligado (LED Verde):</strong> Acende quando o aparelho está com energia.</li>
+    </ul>
+    
+    <h4>Atrás:</h4>
+    <ul>
+        <li><strong>1 Conector de Energia:</strong> Para ligar na fonte de -48 Volts (padrão de equipamentos de telecom, não é tomada comum).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características elétricas</h2>
+    <ul>
+        <li><strong>Voltagem que Precisa:</strong> -48 Volts (padrão de central telefônica).</li>
+        <li><strong>Quanto Consuma:</strong> Consumo médio de aproximadamente 520 mA (parecido com uma lâmpada LED de boa potência).</li>
+        <li><strong>Tempo de Vida:</strong> Foi feito para durar, em média, 200.000 horas de uso contínuo (isso dá mais de 22 anos!).</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como instalar?</h2>
+    <p>Para colocar no rack (armário de equipamentos):</p>
+    <ol>
+        <li>Use uma pulseira antiestática (para não queimar o aparelho com a eletricidade do seu corpo).</li>
+        <li>Coloque a caixinha no espaço vago do rack.</li>
+        <li>Aperte os parafusos laterais para fixar bem.</li>
+        <li>Conecte o cabo de energia (de -48V) na parte de trás.</li>
+        <li>Conecte os cabos de rede dos outros equipamentos nas portas da frente.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como ligar?</h2>
+    <p>É muito simples:</p>
+    <ol>
+        <li>Depois de instalado e com todos os cabos conectados, ligue a fonte de -48V.</li>
+        <li>Observe a luz na frente. Se o LED verde (Power) acender, significa que o MiniRouter está ligado e funcionando.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações básicas do dispositivo</h2>
+    <p><strong>Atenção! A primeira configuração é um pouco técnica.</strong></p>
+    <ol>
+        <li>Você precisa de um notebook com uma porta serial antiga (DB9) ou um adaptador USB-serial.</li>
+        <li>Conecte um cabo serial entre essa porta e o conector CONSOLE (DB9) da frente do MiniRouter.</li>
+        <li>Usando um programa especial no computador (como o PuTTY), você vai acessar uma tela de comandos para dar um nome, definir um endereço IP e uma senha para o aparelho.</li>
+        <li>Depois dessa configuração inicial, o cabo serial não é mais necessário para o funcionamento normal.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e boas práticas</h2>
+    
+    <h4>Para Retirar com Segurança:</h4>
+    <ol>
+        <li>Use a pulseira antiestática.</li>
+        <li>Desconecte todos os cabos de rede da frente.</li>
+        <li>Desligue o cabo de energia atrás.</li>
+        <li>Solte os parafusos e tire o aparelho do rack.</li>
+    </ol>
+    
+    <h4>O que Ele Avisa:</h4>
+    <ul>
+        <li>Se ele parar de funcionar, o sistema de monitoramento recebe um alerta: "Elemento não Responde".</li>
+        <li>Ele também informa quais das suas 5 portas estão com equipamentos conectados e funcionando.</li>
+    </ul>
+    
+    <h4>Boas Práticas:</h4>
+    <p>Sempre manusear com a pulseira antiestática e seguir a ordem correta de conectar/desconectar os cabos (energia por último ao instalar, energia primeiro ao retirar).</p>
+</section>
+
+<section class="mb-5">
+    
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li><strong>Economia:</strong> Reduz drasticamente a quantidade de endereços IPs necessários para monitorar uma rede grande.</li>
+        <li><strong>Organização:</strong> Centraliza a comunicação, deixando a rede de monitoramento mais limpa e fácil de entender.</li>
+        <li><strong>Confiável:</strong> É um equipamento industrial, feito para ficar anos ligado sem dar problema.</li>
+        <li><strong>Compacto:</strong> Ocupa pouco espaço no rack (só 4 cm de altura).</li>
+    </ul>
+    
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li><strong>Configuração Inicial Complicada:</strong> Exige conhecimento técnico e um cabo serial, que não é comum hoje em dia.</li>
+        <li><strong>Energia Especial:</strong> Não liga na tomada comum; precisa de uma fonte de -48VDC, típica de telecomunicações.</li>
+        <li><strong>Gerenciamento "Só Leitura":</strong> O sistema central consegue ver as informações que ele manda, mas não consegue enviar comandos para ele remotamente. Para alterar qualquer configuração, é preciso conectar o cabo serial novamente.</li>
+        <li><strong>Número Fixo de Portas:</strong> Só tem 5 portas. Se precisar conectar mais equipamentos, será necessário outro MiniRouter.</li>
     </ul>
 </section>
 
@@ -223,7 +267,7 @@ write memory
     </div>
 </footer>
 
-<!-- Bootstrap JS (se necessário) -->
+<!-- Bootstrap JS -->
 <script src="../js/bootstrap.bundle.min.js"></script>
 
 </body>

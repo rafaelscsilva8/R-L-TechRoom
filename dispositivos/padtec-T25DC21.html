@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>T25DC21 — Módulo Óptico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do módulo T25DC21 explicado em linguagem acessível." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="..\index.html" class="nav-item nav-link">Início</a>
+            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
+                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
+                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
+                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
+                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
+                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
+                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
+                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
+                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
+                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
+                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
+                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
+                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
+                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
+                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
+                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
+                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
+                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
+                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
+                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
+                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
+                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
+                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
+                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
+                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
+                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
+                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
+                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+                </div>
+            </div>
+            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">T25DC21</h1>
+                <p class="lead">Transponder óptico para conversão e regeneração de sinais entre redes cliente e DWDM.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/T25DC21-4BRE4L.png" class="img-fluid rounded shadow" alt="T25DC21 Module">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>O que é o T25DC21-4BRE4L?</h2>
+    <p>
+        O T25DC21-4BRE4L é um equipamento usado em redes de fibra óptica de alta velocidade.
+        Ele funciona como um tradutor e reforçador de sinal entre dois tipos de fibra diferentes: a fibra usada pelo cliente e a rede DWDM da operadora.
+    </p>
+    <p>
+        É um transponder, um equipamento que:
+    </p>
+    <ul>
+        <li>recebe um sinal óptico do cliente</li>
+        <li>converte esse sinal para o padrão da rede DWDM</li>
+        <li>melhora e limpa o sinal (regeneração)</li>
+        <li>e envia esse sinal para longas distâncias pela rede óptica</li>
+        <li>Ele também faz o caminho contrário: pega o sinal da rede e converte de volta para o cliente.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>1. Como funciona</h2>
+    <p>Pense nele como um "centro de tratamento do sinal":</p>
+    <ul>
+        <li>Ele limpa o sinal que chega</li>
+        <li>Ajusta o formato do sinal</li>
+        <li>Sincroniza o tempo do sinal (clock)</li>
+        <li>Converte para outro tipo de fibra/tecnologia</li>
+        <li>E então envia para frente com boa qualidade</li>
+        <li>Tudo isso acontece automaticamente enquanto o equipamento está ligado.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>2. Portas e conexões</h2>
+    <div>
+        <p><strong>O equipamento tem 4 portas de fibra:</strong></p>
+        <p><strong>Lado do cliente (equipamento do usuário)</strong></p>
+        <ul>
+            <li>Entrada do cliente (IN2)</li>
+            <li>Saída para o cliente (OUT2)</li>
+        </ul>
+        <p><strong>Lado da rede DWDM (operadora)</strong></p>
+        <ul>
+            <li>Entrada da rede (IN1)</li>
+            <li>Saída para a rede (OUT1)</li>
+        </ul>
+        <p>Essas fibras entram com um tipo de sinal e saem convertidas e reforçadas.</p>
+        <p><strong>Ele também tem luzes (LEDs) na frente que mostram:</strong></p>
+        <ul>
+            <li>se tem sinal chegando</li>
+            <li>se tem falha</li>
+            <li>se o laser está ativo</li>
+            <li>se o equipamento está ligado</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>3. Características elétricas </h2>
+    <ul>
+        <li>Ele liga usando a energia padrão de equipamentos de telecom (-48 volts)</li>
+        <li>Consome pouca energia</li>
+        <li>Funciona em temperaturas de aproximadamente -5°C até 45°C</li>
+        <li>Tem vida útil muito alta (centenas de milhares de horas)</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>4. Como instalar</h2>
+    <p>A instalação é simples e segue estes passos:</p>
+    <ol>
+        <li>Colocar o módulo no espaço correto do rack (4U).</li>
+        <li>Encaixar até ele prender no conector interno.</li>
+        <li>Ligar as fibras nos lugares corretos (rede <-> cliente).</li>
+        <li>Ele liga sozinho quando recebe energia do rack.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como ligar</h2>
+    <p>
+        Não tem botão de ligar.<br>
+        Assim que o rack envia energia para ele, o módulo já liga sozinho e as luzes de status começam a acender.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>6. Configurações básicas</h2>
+    <ul>
+        <li>O equipamento não tem chaves nem botões.</li>
+        <li>Toda configuração é feita pelo sistema de gerência do rack (um "computador" que controla tudo).</li>
+        <li>Por lá é possível:
+            <ul>
+                <li>ativar/desativar lasers</li>
+                <li>ver alarmes</li>
+                <li>ver potência óptica</li>
+                <li>monitorar o funcionamento</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Manutenção e boas práticas</h2>
+    <ul>
+        <li>Não olhar nunca diretamente para as portas ópticas (mesmo sendo seguras).</li>
+        <li>Manter as fibras sempre limpas com álcool isopropílico.</li>
+        <li>Evitar tocar nos conectores sem proteção.</li>
+        <li>Guardar sempre o equipamento em embalagem apropriada.</li>
+        <li>Manter as tampas nos conectores quando não estiverem sendo usados.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+
+    <h2>9. Vantagens</h2>
+    <ul>
+        <li>Permite transportar sinais por longas distâncias</li>
+        <li>Melhora e reforça o sinal</li>
+        <li>Converte sinais entre cliente e rede DWDM</li>
+        <li>É simples de instalar e operar</li>
+        <li>Muito confiável</li>
+    </ul>
+
+    <h2>10. Limitações</h2>
+    <ul>
+        <li>Precisa de um supervisor para gerenciar</li>
+        <li>Ocupa 4U no rack</li>
+        <li>A interface do cliente é fixa (1310 nm)</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+    <div class="card p-4">
+        <ol>
+            <li class="mb-3">
+                Qual é a principal função do T25DC21?
+                <div class="quiz-option">A) Fornecer energia -48V para o chassi.</div>
+                <div class="quiz-option">B) Funcionar como tradutor e reforçador de sinal entre cliente e rede DWDM.</div>
+                <div class="quiz-option">C) Monitorar a temperatura do datacenter.</div>
+            </li>
+
+            <li class="mb-3">
+                Quantas portas de fibra possui o T25DC21 e quais são suas funções?
+                <div class="quiz-option">A) 2 portas - uma para entrada e outra para saída.</div>
+                <div class="quiz-option">B) 4 portas - IN1/OUT1 (rede DWDM) e IN2/OUT2 (cliente).</div>
+                <div class="quiz-option">C) 6 portas - para múltiplas conexões simultâneas.</div>
+            </li>
+
+            <li class="mb-3">
+                Como é realizada a configuração do T25DC21?
+                <div class="quiz-option">A) Através de chaves e botões no painel frontal.</div>
+                <div class="quiz-option">B) Por comandos de voz.</div>
+                <div class="quiz-option">C) Pelo sistema de gerência do rack, sem chaves ou botões físicos.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — T25DC21</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+
+</body>
+</html>
