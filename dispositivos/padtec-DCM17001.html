@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="utf-8" />
     <title>PADTEC DCM17001 — Guia Simples</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Guia simples e didático do Padtec DCM17001. Entenda o que é, como funciona e para que serve um módulo de compensação de dispersão."/>
-    <link href="img/tecnologia.png" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Guia simples e didático do Padtec DCM17001. Entenda o que é, como funciona e para que serve um módulo de compensação de dispersão." />
+    <link href="../img/tecnologia.png" rel="icon" />
 
     <!-- Google Fonts & Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 
     <style>
         .product-hero {
-            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            background: linear-gradient(90deg, rgba(24, 29, 56, 0.85), rgba(2, 16, 33, 0.85)), center/cover no-repeat;
             color: #fff;
             padding: 60px 0;
         }
@@ -33,7 +37,9 @@
             overflow-x: auto;
         }
 
-        .card { border-radius: 12px; }
+        .card {
+            border-radius: 12px;
+        }
 
         .quiz-option {
             cursor: pointer;
@@ -42,6 +48,7 @@
             border: 1px solid #ccc;
             transition: 0.2s;
         }
+
         .quiz-option:hover {
             background: #f5f5f5;
         }
@@ -49,255 +56,223 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="..\index.html" class="nav-item nav-link">Início</a>
-            <a href="..\sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
-            <a href="..\imagens.html" class="nav-item nav-link">Imagens</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
-                <div class="dropdown-menu fade-down m-0">
-                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
-                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
-                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
-                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
-                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
-                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
-                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
-                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
-                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
-                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
-                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
-                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
-                    <a href="padtec-SCMLC4B5L.html" class="dropdown-item active">SCMLC 4B5L</a>
-                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
-                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
-                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
-                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
-                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
-                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
-                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
-                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
-                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
-                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
-                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
-                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
-                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
-                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
-                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">ROAC281SAH</a>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+        </a>
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+                <a href="../index.html" class="nav-item nav-link active">Início</a>
+                <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+                <a href="../equipamentos.html" class="nav-item nav-link">Equipamentos</a>
+
+                <div class="nav-item dropdown">
+                    <div class="dropdown-menu fade-down m-0">
+            
+                    </div>
+                </div>
+
+                <a href="../contato.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6">
+                    <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                    <h1 class="display-5 mb-3">PADTEC DCM17001</h1>
+                    <p class="lead">
+                        Um módulo óptico passivo usado para corrigir distorções na luz quando ela percorre longas
+                        distâncias pela fibra óptica.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="../img/DCM17001.jpg" class="img-fluid rounded shadow">
                 </div>
             </div>
-            <a href="../contato.html" class="nav-item nav-link">Contato</a>
         </div>
-    </div>
-</nav>
+    </section>
 
-<!-- Hero -->
-<section class="product-hero">
-    <div class="container">
-        <div class="row align-items-center gy-4">
-            <div class="col-lg-6">
-                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
-                <h1 class="display-5 mb-3">PADTEC DCM17001</h1>
-                <p class="lead">
-                    Um módulo óptico passivo usado para corrigir distorções na luz quando ela percorre longas distâncias pela fibra óptica.
-                </p>
-            </div>
+    <main class="container my-5">
 
-            <div class="col-lg-6 text-center">
-                <img src="../img/DCM17001.jpg" class="img-fluid rounded shadow">
-            </div>
+        <section class="mb-5">
+            <h2>1. O que é o PADTEC DCM17001?</h2>
+
+            <p>
+                O DCM é um “corrigidor de sinal”.
+                Mais especificamente, ele corrige um efeito chamado dispersão, que faz com que a luz se espalhe e o
+                sinal chegue “embaralhado”.
+
+                O modelo 17001 corrige até 1700 unidades desse problema (ps/nm).
+            </p>
+
+            <p>
+                O <strong>Padtec DCM17001</strong> é um <strong>Módulo de Compensação de Dispersão</strong>.
+                Ele corrige um problema que acontece quando a luz percorre MUITOS quilômetros dentro de uma fibra
+                óptica.
+            </p>
+
+            <p>
+                Imagine que você está gritando com alguém do outro lado de um corredor bem longo.
+                Sua voz chega, mas chega meio “espalhada”, “embaçada”, difícil de entender.
+                Isso acontece porque o som se espalha no caminho.
+            </p>
+
+            <p>
+                Com a luz na fibra óptica é igual:
+                quando ela anda longe demais, ela começa a “escorregar” e se espalhar.
+                Isso atrapalha a internet.
+            </p>
+
+            <p>
+                O DCM17001 serve para <strong>arrumar essa luz espalhada</strong>.
+                Ele coloca a luz “de volta no trilho”, deixando o sinal limpo de novo.
+            </p>
+
+            <h4>Em uma frase simples:</h4>
+            <p>
+                <strong>Ele melhora a qualidade do sinal óptico em enlaces muito longos.</strong>
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h2>2. Como ligar</h2>
+
+            <p>Por ser um dispositivo totalmente passivo:</p>
+
+            <ul>
+                <li>Não tem energia elétrica</li>
+                <li>Não tem botão</li>
+                <li>Não tem configuração</li>
+                <li>Basta plugar as fibras</li>
+            </ul>
+
+            <h4>Como usar na prática:</h4>
+
+            <ol>
+                <li>Conecte o sinal óptico que chega (com dispersão) na porta <strong>IN</strong>.</li>
+                <li>Conecte a fibra que vai continuar o caminho na porta <strong>OUT</strong>.</li>
+                <li>Ele imediatamente já começa a “arrumar” o sinal.</li>
+            </ol>
+
+            <p>Simples assim, literalmente plugou, funcionou.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2>3. Como acessar a configuração</h2>
+
+            <p>
+                Ele <strong>não possui nenhum tipo de configuração</strong>, interface, IP ou console.
+                Nada para configurar.
+            </p>
+
+            <p>
+                Ele funciona como um espelho: a luz chega e ele corrige automaticamente.
+            </p>
+        </section>
+
+        <h2>Mini questionário</h2>
+
+        <div class="card p-4" id="questionario">
+            <ol>
+                <li class="mb-3">
+                    O DCM17001 é um:
+                    <div class="quiz-option">A) Switch</div>
+                    <div class="quiz-option">B) Roteador</div>
+                    <div class="quiz-option">C) Módulo de Compensação de Dispersão</div>
+                </li>
+
+                <li class="mb-3">
+                    Para que serve a compensação de dispersão?
+                    <div class="quiz-option">A) Aumentar a potência do sinal</div>
+                    <div class="quiz-option">B) Corrigir a luz que se espalha em longas distâncias</div>
+                    <div class="quiz-option">C) Criar VLANs</div>
+                </li>
+
+                <li class="mb-3">
+                    O DCM possui configuração via navegador?
+                    <div class="quiz-option">A) Não, ele é totalmente passivo</div>
+                    <div class="quiz-option">B) Sim</div>
+                    <div class="quiz-option">C) Apenas via cabo console</div>
+                </li>
+
+                
+            </ol>
         </div>
-    </div>
-</section>
 
-<main class="container my-5">
+    </main>
 
-<section class="mb-5">
-    <h2>1. O que é o PADTEC DCM17001?</h2>
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-1">Guia simples — PADTEC DCM17001</p>
+            <small>R&L Techroom — ETEC Takashi Morita</small>
+        </div>
+    </footer>
 
-    <p>
-        O DCM é um “corrigidor de sinal”.
-        Mais especificamente, ele corrige um efeito chamado dispersão, que faz com que a luz se espalhe e o sinal chegue “embaralhado”.
+    <!-- SCRIPT CORRIGIDO DO QUIZ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
 
-        O modelo 17001 corrige até 1700 unidades desse problema (ps/nm).
-    </p>
+            const corretas = ["C", "B", "A"];
 
-    <p>
-        O <strong>Padtec DCM17001</strong> é um <strong>Módulo de Compensação de Dispersão</strong>.
-        Ele corrige um problema que acontece quando a luz percorre MUITOS quilômetros dentro de uma fibra óptica.
-    </p>
+            const questionario = document.getElementById("questionario");
+            const perguntas = questionario.querySelectorAll("ol > li");
 
-    <p>
-        Imagine que você está gritando com alguém do outro lado de um corredor bem longo.
-        Sua voz chega, mas chega meio “espalhada”, “embaçada”, difícil de entender.
-        Isso acontece porque o som se espalha no caminho.
-    </p>
+            perguntas.forEach((pergunta, index) => {
+                const opcoes = pergunta.querySelectorAll(".quiz-option");
 
-    <p>
-        Com a luz na fibra óptica é igual:
-        quando ela anda longe demais, ela começa a “escorregar” e se espalhar.
-        Isso atrapalha a internet.
-    </p>
+                opcoes.forEach(opcao => {
+                    opcao.addEventListener("click", () => {
 
-    <p>
-        O DCM17001 serve para <strong>arrumar essa luz espalhada</strong>.
-        Ele coloca a luz “de volta no trilho”, deixando o sinal limpo de novo.
-    </p>
+                        if (pergunta.classList.contains("respondida")) return;
+                        pergunta.classList.add("respondida");
 
-    <h4>Em uma frase simples:</h4>
-    <p>
-        <strong>Ele melhora a qualidade do sinal óptico em enlaces muito longos.</strong>
-    </p>
-</section>
+                        const letraSelecionada = opcao.innerText.trim().substring(0, 1);
 
-<section class="mb-5">
-    <h2>2. Como ligar</h2>
+                        if (letraSelecionada === corretas[index]) {
 
-    <p>Por ser um dispositivo totalmente passivo:</p>
+                            opcao.style.background = "#28a745";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #1e7e34";
 
-    <ul>
-        <li>Não tem energia elétrica</li>
-        <li>Não tem botão</li>
-        <li>Não tem configuração</li>
-        <li>Basta plugar as fibras</li>
-    </ul>
+                        } else {
 
-    <h4>Como usar na prática:</h4>
+                            opcao.style.background = "#dc3545";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #b02a37";
 
-    <ol>
-        <li>Conecte o sinal óptico que chega (com dispersão) na porta <strong>IN</strong>.</li>
-        <li>Conecte a fibra que vai continuar o caminho na porta <strong>OUT</strong>.</li>
-        <li>Ele imediatamente já começa a “arrumar” o sinal.</li>
-    </ol>
+                            opcoes.forEach(item => {
+                                const letra = item.innerText.trim().substring(0, 1);
 
-    <p>Simples assim, literalmente plugou, funcionou.</p>
-</section>
+                                if (letra === corretas[index]) {
+                                    item.style.background = "#28a745";
+                                    item.style.color = "white";
+                                    item.style.border = "1px solid #1e7e34";
+                                }
+                            });
 
-<section class="mb-5">
-    <h2>3. Como acessar a configuração</h2>
-
-    <p>
-        Ele <strong>não possui nenhum tipo de configuração</strong>, interface, IP ou console.
-        Nada para configurar.
-    </p>
-
-    <p>
-        Ele funciona como um espelho: a luz chega e ele corrige automaticamente.
-    </p>
-</section>
-
-<h2>Mini questionário</h2>
-
-<div class="card p-4" id="questionario">
-    <ol>
-        <li class="mb-3">
-            O DCM17001 é um:
-            <div class="quiz-option">A) Switch</div>
-            <div class="quiz-option">B) Roteador</div>
-            <div class="quiz-option">C) Módulo óptico passivo</div>
-        </li>
-
-        <li class="mb-3">
-            Para que serve a compensação de dispersão?
-            <div class="quiz-option">A) Aumentar a potência do sinal</div>
-            <div class="quiz-option">B) Corrigir a luz que se espalha em longas distâncias</div>
-            <div class="quiz-option">C) Criar VLANs</div>
-        </li>
-
-        <li class="mb-3">
-            O DCM possui configuração via navegador?
-            <div class="quiz-option">A) Sim</div>
-            <div class="quiz-option">B) Não, ele é totalmente passivo</div>
-            <div class="quiz-option">C) Apenas via cabo console</div>
-        </li>
-
-        <li class="mb-3">
-            Que tipo de porta ele utiliza?
-            <div class="quiz-option">A) RJ45</div>
-            <div class="quiz-option">B) LC/UPC óptico</div>
-            <div class="quiz-option">C) HDMI</div>
-        </li>
-    </ol>
-</div>
-
-</main>
-
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <p class="mb-1">Guia simples — PADTEC DCM17001</p>
-        <small>R&L Techroom — ETEC Takashi Morita</small>
-    </div>
-</footer>
-
-<!-- SCRIPT CORRIGIDO DO QUIZ -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-    const corretas = ["C", "B", "B", "B"]; 
-
-    const questionario  = document.getElementById("questionario");
-    const perguntas     = questionario.querySelectorAll("ol > li");
-
-    perguntas.forEach((pergunta, index) => {
-        const opcoes = pergunta.querySelectorAll(".quiz-option");
-
-        opcoes.forEach(opcao => {
-            opcao.addEventListener("click", () => {
-
-                if (pergunta.classList.contains("respondida")) return;
-                pergunta.classList.add("respondida");
-
-                const letraSelecionada = opcao.innerText.trim().substring(0, 1);
-
-                console.log(`Selecionada: ${letraSelecionada}`);
-                console.log(`INDEX: ${index}`);
-                console.log(`Correta: ${corretas[index]}`);
-                console.log(`Correta: ${corretas}`);
-                console.log(`{corretas[0]: ${corretas[0]}`);
-                console.log(`{corretas[1]: ${corretas[1]}`);
-                console.log(`{corretas[2]: ${corretas[2]}`);
-                console.log('\n');
-                console.log(pergunta);
-
-                if (letraSelecionada === corretas[index]) {
-
-                    opcao.style.background = "#28a745";
-                    opcao.style.color = "white";
-                    opcao.style.border = "1px solid #1e7e34";
-
-                } else {
-
-                    opcao.style.background = "#dc3545";
-                    opcao.style.color = "white";
-                    opcao.style.border = "1px solid #b02a37";
-
-                    opcoes.forEach(item => {
-                        const letra = item.innerText.trim().substring(0, 1);
-
-                        if (letra === corretas[index]) {
-                            item.style.background = "#28a745";
-                            item.style.color = "white";
-                            item.style.border = "1px solid #1e7e34";
                         }
+
                     });
-
-                }
-
+                });
             });
         });
-    });
-});
-</script>
+    </script>
 
 </body>
+
 </html>

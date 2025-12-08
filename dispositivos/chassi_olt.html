@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>Chassi Modular Compacto — GIGANET OLT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do Chassi Modular Compacto (OLT) GIGANET Systems, explicado de forma clara e acessível." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        /* Manter o estilo original para a seção principal */
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+                <a href="../index.html" class="nav-item nav-link active">Início</a>
+                <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+                <a href="../equipamentos.html" class="nav-item nav-link">Equipamentos</a>
+
+                <div class="nav-item dropdown">
+                    <div class="dropdown-menu fade-down m-0">
+            
+                    </div>
+                </div>
+
+                <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">Chassi OLT GIGANET</h1>
+                <p class="lead">Terminal de Linha Óptica (OLT) compacto usado em redes FTTx (GPON/EPON) para conectar clientes.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/chassi-olt.jpg" class="img-fluid rounded shadow" alt="Chassi de Terminal de Linha Óptica Compacto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o Chassi OLT GIGANET?</h2>
+    <p>
+        O **Terminal de Linha Óptica (OLT)** é o equipamento central em uma rede de fibra até a casa (FTTH) ou prédio (FTTB). Ele fica na central do provedor (POP) e é responsável por enviar e receber dados de milhares de clientes conectados via fibra óptica (ONUs/ONTs).
+    </p>
+    <p>
+        Este modelo é um **Chassi Modular Compacto**, projetado para *racks* menores ou locais com espaço limitado, fornecendo slots para cartões de serviço (PLCs, Uplink) e fontes de alimentação redundantes.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <ul>
+        <li>Ele recebe o tráfego de dados da internet (Uplink) através das portas Ethernet/SFP+ (visíveis à esquerda).</li>
+        <li>Distribui esse tráfego por meio de cartões de serviço (PLCs) que contêm múltiplas portas ópticas (GPON/EPON), conectando a fibra que vai até o cliente.</li>
+        <li>O **Backplane** interno permite a comunicação de alta velocidade entre os cartões de Uplink, os cartões de Serviço e os módulos de Controle.</li>
+        <li>Ele gerencia o tempo de acesso de cada cliente (multiplexação) para garantir que todos tenham banda larga.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <div>
+        <p><strong>Na parte frontal do Chassi, você encontra:</strong></p>
+        <ul>
+            <li>**Portas de Uplink (RJ-45 e SFP/SFP+):** Localizadas nos cartões de controle/Uplink (à esquerda), conectam a OLT à rede principal de internet ou ao Core do Provedor.</li>
+            <li>**Portas de Serviço Óptico (PLCs):** Conectores SC/PC nos cartões de linha (à direita) que enviam o sinal óptico para os clientes (ONU/ONTs).</li>
+            <li>**Portas de Gerenciamento (MGMT/CONSOLE):** (Visíveis em um dos cartões internos) Portas para configuração local (Console) e monitoramento remoto (MGMT Ethernet).</li>
+            <li>**Entrada de Energia AC/DC:** Conectores C13 (visíveis à direita) para as fontes de alimentação redundantes (**Power Supply 1 e 2**).</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>**Fontes de Alimentação:** O dispositivo na imagem mostra duas fontes de alimentação, indicando redundância (1+1).</li>
+        <li>**Tensão de Operação:** As fontes visíveis aceitam **220V AC** (etiqueta "AC-220V-240V") ou podem ser modelos mistos (AC/DC).</li>
+        <li>**Ventilação:** Módulos de ventilação ativos (visíveis nas fontes) para garantir o resfriamento.</li>
+        <li>**Consumo:** O consumo varia de acordo com o número de cartões de serviço instalados e a capacidade total de tráfego.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>O Chassi é fixado em um **Rack de 19 polegadas**, geralmente ocupando 2U ou 3U de altura.</li>
+        <li>Instale as duas **Fontes de Alimentação (PSUs)** e conecte os cabos de energia (AC ou DC) nelas.</li>
+        <li>Encaixe os **Cartões de Controle/Uplink** e os **Cartões de Serviço Óptico (PLCs)** nos *slots* apropriados.</li>
+        <li>Conecte os cabos de rede (Uplink) nas portas SFP+ e o cabo de gerência na porta MGMT.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>O Chassi é energizado ao conectar os cabos de alimentação nas fontes e ligar a **chave ON/OFF** individual em cada fonte (visível na parte direita).</li>
+        <li>**Luzes Indicadoras:** Verifique os LEDs nas fontes e nos cartões:
+            <ul>
+                <li>LEDs de **POWER** (Fontes): devem estar verdes ou acesos.</li>
+                <li>LEDs de **LINK** (Uplink/Serviço): indicam conexão ativa com a rede e com as ONUs.</li>
+            </ul>
+        </li>
+        <li>A OLT inicia o sistema operacional e pode levar alguns minutos para que os cartões de serviço fiquem totalmente operacionais.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>A OLT é configurada via **CLI (Interface de Linha de Comando)** ou via interface web (se disponível) através da porta MGMT ou Console.</li>
+        <li>É necessário configurar o **endereço IP** do dispositivo para gerenciamento remoto.</li>
+        <li>Os **serviços (VLANs)** de internet, voz e vídeo são configurados nos cartões de serviço óptico.</li>
+        <li>A OLT precisa autenticar e gerenciar cada ONU/ONT (cliente) individualmente.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Mantenha as **conexões ópticas limpas** (use *cleaners* específicos) para evitar perda de sinal.</li>
+        <li>Monitore o **nível de sinal óptico (RX/TX)** de cada porta GPON para identificar problemas na fibra.</li>
+        <li>Verifique regularmente o **status das Fontes de Alimentação**. Se uma falhar, substitua para manter a redundância.</li>
+        <li>Mantenha o software (firmware) da OLT sempre atualizado.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li>**Capacidade de Atendimento:** Permite conectar centenas ou milhares de clientes (dependendo do *split* e número de cartões).</li>
+        <li>**Redundância:** Fontes de alimentação redundantes e, em alguns modelos, cartões de controle redundantes.</li>
+        <li>**Design Compacto:** Ideal para Data Centers ou POPs com espaço limitado (mais eficiente que chassis grandes).</li>
+    </ul>
+
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li>**Escalabilidade:** Tem um número máximo de *slots* e, portanto, uma limitação na expansão de clientes (diferente de chassis maiores).</li>
+        <li>**Complexidade:** A configuração de serviços e gerenciamento de clientes via OLT é técnica e requer conhecimento em redes GPON/EPON.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário (Foco no OLT)</h2>
+
+        <div class="card p-4" id="questionario">
+        <ol>
+            <li class="mb-3">
+                Qual a principal função do Chassi OLT em uma rede de provedor?
+                <div class="quiz-option">A) Amplificar o sinal óptico para longas distâncias.</div>
+                <div class="quiz-option">B) Conectar a rede do provedor com a fibra dos clientes e gerenciar o tráfego.</div>
+                <div class="quiz-option">C) Converter o sinal de fibra em sinal Wi-Fi.</div>
+            </li>
+
+            <li class="mb-3">
+                O que a OLT utiliza para receber o tráfego de dados da rede principal do provedor?
+                <div class="quiz-option">A) Portas de serviço óptico (PLCs).</div>
+                <div class="quiz-option">B) Portas de Uplink (Ethernet/SFP+).</div>
+                <div class="quiz-option">C) Porta Console (DB9).</div>
+            </li>
+
+            <li class="mb-3">
+                Qual é a principal recomendação de manutenção para as portas de serviço óptico?
+                <div class="quiz-option">A) Verificar o LED de energia.</div>
+                <div class="quiz-option">B) Usar pulseira antiestática ao tocar nelas.</div>
+                <div class="quiz-option">C) Manter os conectores limpos para evitar perda de sinal.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — Chassi OLT GIGANET</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+<script>
+        // Manter o JavaScript para a funcionalidade do questionário
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Respostas Corretas: B, B, C
+            const corretas = ["B", "B", "C"];
+
+            const questionario = document.getElementById("questionario");
+            const perguntas = questionario.querySelectorAll("ol > li");
+
+            perguntas.forEach((pergunta, index) => {
+                const opcoes = pergunta.querySelectorAll(".quiz-option");
+
+                opcoes.forEach(opcao => {
+                    opcao.addEventListener("click", () => {
+
+                        if (pergunta.classList.contains("respondida")) return;
+                        pergunta.classList.add("respondida");
+
+                        const letraSelecionada = opcao.innerText.trim().substring(0, 1);
+
+                        if (letraSelecionada === corretas[index]) {
+
+                            opcao.style.background = "#28a745";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #1e7e34";
+
+                        } else {
+
+                            opcao.style.background = "#dc3545";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #b02a37";
+
+                            opcoes.forEach(item => {
+                                const letra = item.innerText.trim().substring(0, 1);
+
+                                if (letra === corretas[index]) {
+                                    item.style.background = "#28a745";
+                                    item.style.color = "white";
+                                    item.style.border = "1px solid #1e7e34";
+                                }
+                            });
+
+                        }
+
+                    });
+                });
+            });
+        });
+    </script>
+</body>

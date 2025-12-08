@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>Chassi RTM-14 — Estrutura Óptica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guia simples e didático do Chassi RTM-14 (14U), explicado de forma clara e acessível." />
+
+    <link href="img/tecnologia.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        /* Manter o estilo original para a seção principal */
+        .product-hero {
+            background: linear-gradient(90deg, rgba(24,29,56,0.85), rgba(2,16,33,0.85)), url('./img/padtech-data-center.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .card { border-radius: 12px; }
+        .quiz-option { cursor:pointer; padding:10px; border-radius:8px; border:1px solid #ccc; }
+        .quiz-option:hover { background:#f5f5f5; }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>R&L Techroom</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+                <a href="../index.html" class="nav-item nav-link active">Início</a>
+                <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+                <a href="../equipamentos.html" class="nav-item nav-link">Equipamentos</a>
+
+                <div class="nav-item dropdown">
+                    <div class="dropdown-menu fade-down m-0">
+            
+                    </div>
+                </div>
+
+                <a href="../contato.html" class="nav-item nav-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h5 class="text-primary text-uppercase mb-3">Guia simples</h5>
+                <h1 class="display-5 mb-3">Chassi RTM-14</h1>
+                <p class="lead">Estrutura central de telecomunicações que fornece energia, resfriamento e barramento para módulos ópticos.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/chassi-jpg.jpg" class="img-fluid rounded shadow" alt="Chassi de Telecomunicações RTM-14">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+<section class="mb-5">
+    <h2>1. O que é o Chassi RTM-14?</h2>
+    <p>
+        O **Chassi de Telecomunicações** (também conhecido como **Sub-Rack** ou **Prateleira de Equipamento**) é a estrutura física que abriga e interconecta os diferentes módulos (como o SPVL-90) de um sistema óptico (DWDM/OTN).
+    </p>
+    <p>
+        Ele funciona como o "gabinete" central, fornecendo **energia elétrica**, **resfriamento** e os **barramentos de comunicação** necessários para o funcionamento dos cartões.
+    </p>
+</section>
+
+<section class="mb-5">
+    <h2>2. Como funciona?</h2>
+    <ul>
+        <li>O Chassi recebe a energia de alimentação principal e a distribui para os *slots* dos módulos através do **Backplane** (placa traseira).</li>
+        <li>Possui **Unidades de Fonte de Alimentação (PSUs)** e módulos de **Ventilação** dedicados, geralmente na parte inferior, que garantem a estabilidade e o resfriamento.</li>
+        <li>Os barramentos do Backplane permitem que os módulos de controle (como o SPVL-90) se comuniquem com os módulos de serviço (amplificadores, transponders).</li>
+        <li>O modelo RTM-14 é grande, feito para ocupar **14U** (Unidades de Rack) em um *rack* padrão de 19 polegadas.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>3. Portas e Conectores do Dispositivo</h2>
+    <div>
+        <p><strong>Os conectores do Chassi estão concentrados nas fontes de alimentação (PSUs) e no(s) slot(s) de Gerenciamento:</strong></p>
+        <ul>
+            <li>**Terminais de Energia (Fontes):** Para receber a alimentação principal de **-48V DC** e conectar o **Aterramento (GND)**.</li>
+            <li>**Chaves ON/OFF (Fontes):** Permitem ligar ou desligar as fontes de alimentação e as unidades de ventilação do Chassi.</li>
+            <li>**Slots de Módulo:** Múltiplos encaixes na parte frontal superior (visíveis na foto) onde os módulos de serviço e controle são inseridos.</li>
+            <li>**Interfaces de Controle (Slot de Gerenciamento):** Portas como **Ethernet (RJ-45)** e **Serial/CRAFT (DB9)**, localizadas no módulo de controle (que é encaixado no chassi), para gerenciamento remoto e local.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2>4. Características Elétricas</h2>
+    <ul>
+        <li>**Tensão de Operação:** Opera tipicamente com **-48V DC**, que é o padrão de telecomunicações.</li>
+        <li>**Fontes Redundantes:** Possui *slots* para duas ou mais **Unidades de Fonte de Alimentação (PSUs)** que trabalham em redundância (geralmente 1+1).</li>
+        <li>**Capacidade:** A capacidade total de energia é alta, projetada para suportar a carga de todos os módulos de serviço instalados.</li>
+        <li>**Proteção:** Incorpora proteções contra sobrecorrente ou subtensão, geralmente com disjuntores ou fusíveis nas PSUs.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>5. Como Instalar</h2>
+    <ol>
+        <li>O **Chassi é a primeira peça** a ser instalada no rack de 19 polegadas, fixado com parafusos nas abas laterais.</li>
+        <li>Conecte o terminal de **Aterramento (GND)** do Chassi ao ponto de aterramento do rack para segurança.</li>
+        <li>Conecte os cabos de alimentação **-48V DC** nas Unidades de Fonte de Alimentação (PSUs) localizadas na base.</li>
+        <li>Após fixar e energizar, os módulos individuais (SPVL-90, amplificadores, etc.) podem ser encaixados nos *slots*.</li>
+    </ol>
+</section>
+
+<section class="mb-5">
+    <h2>6. Como Ligar</h2>
+    <ul>
+        <li>O Chassi é ligado acionando as **chaves ON/OFF** nas **Unidades de Fonte de Alimentação (PSUs)** e nos módulos de ventilação, localizadas na parte inferior.</li>
+        <li>**Luzes Indicadoras:** LEDs nas PSUs (e nos módulos de ventilação) indicam o status de energia (**POWER**) e operação.</li>
+        <li>O sistema de ventilação deve ser acionado assim que a energia é aplicada, indicando que o **resfriamento** está ativo.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>7. Configurações Básicas</h2>
+    <ul>
+        <li>A configuração do Chassi é primariamente **física** (instalação e energia).</li>
+        <li>O **Gerenciamento Lógico** de alarmes (temperatura, falha de ventoinha/fonte) é feito pelo **Módulo de Controle** (como o SPVL-90) que está inserido em um dos *slots* do Chassi.</li>
+        <li>Cada *slot* no Chassi tem um **endereço lógico** que permite ao Módulo de Controle identificar qual placa está instalada e monitorá-la.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>8. Manutenção e Boas Práticas</h2>
+    <ul>
+        <li>Mantenha as entradas de ar e os módulos de ventilação **livres de poeira e obstruções** para garantir o resfriamento.</li>
+        <li>Monitore o **status das Fontes de Alimentação (PSUs)**. A falha em uma delas deve ser corrigida imediatamente para manter a redundância.</li>
+        <li>As **ventoinhas** e as **PSUs** são geralmente trocáveis a quente (*hot-swappable*), facilitando a manutenção sem desligar o sistema.</li>
+        <li>Sempre use a **pulseira antiestática** ao manusear os módulos que são encaixados no Chassi.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+
+    <h2>9. Vantagens:</h2>
+    <ul>
+        <li>**Alta Disponibilidade:** Suporta fontes de alimentação redundantes e ventilação redundante.</li>
+        <li>**Densidade de Módulos:** Permite abrigar um grande número de módulos (cartões) de serviço em um único *frame*.</li>
+        <li>**Gerenciamento Centralizado:** Energia, resfriamento e barramento são gerenciados por uma única estrutura base.</li>
+    </ul>
+
+    <h2>10. Limitações:</h2>
+    <ul>
+        <li>**Tamanho:** O modelo RTM-14 é grande (14U) e exige espaço considerável no Data Center ou Central.</li>
+        <li>**Custo:** O custo inicial da estrutura (Chassi e Fontes) é elevado.</li>
+        <li>**Requisito de Infraestrutura:** Exige alimentação de **-48V DC** específica de telecomunicações.</li>
+    </ul>
+</section>
+
+<section class="mb-5">
+    <h2>Mini questionário</h2>
+
+        <div class="card p-4" id="questionario">
+        <ol>
+            <li class="mb-3">
+                Qual a principal função do Chassi de Telecomunicações?
+                <div class="quiz-option">A) Roteamento de pacotes IP de alta velocidade.</div>
+                <div class="quiz-option">B) Fornecer uma estrutura física, energia e resfriamento aos módulos internos.</div>
+                <div class="quiz-option">C) Convergir sinais ópticos para elétricos.</div>
+            </li>
+
+            <li class="mb-3">
+                Qual a tensão elétrica padrão de entrada para este tipo de Chassi?
+                <div class="quiz-option">A) 110V AC ou 220V AC.</div>
+                <div class="quiz-option">B) 12V DC.</div>
+                <div class="quiz-option">C) -48V DC.</div>
+            </li>
+
+            <li class="mb-3">
+                O que a redundância de Fontes de Alimentação (PSUs) no Chassi garante?
+                <div class="quiz-option">A) Maior velocidade de processamento do módulo de controle.</div>
+                <div class="quiz-option">B) A continuidade da alimentação elétrica, mesmo com a falha de uma das fontes.</div>
+                <div class="quiz-option">C) A limpeza automática dos filtros de ar.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">Guia simples — Chassi RTM-14</p>
+        <small>R&L Techroom — ETEC Takashi Morita</small>
+    </div>
+</footer>
+<script>
+        // Manter o JavaScript para a funcionalidade do questionário
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Respostas Corretas: B, C, B
+            const corretas = ["B", "C", "B"];
+
+            const questionario = document.getElementById("questionario");
+            const perguntas = questionario.querySelectorAll("ol > li");
+
+            perguntas.forEach((pergunta, index) => {
+                const opcoes = pergunta.querySelectorAll(".quiz-option");
+
+                opcoes.forEach(opcao => {
+                    opcao.addEventListener("click", () => {
+
+                        if (pergunta.classList.contains("respondida")) return;
+                        pergunta.classList.add("respondida");
+
+                        const letraSelecionada = opcao.innerText.trim().substring(0, 1);
+
+                        if (letraSelecionada === corretas[index]) {
+
+                            opcao.style.background = "#28a745";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #1e7e34";
+
+                        } else {
+
+                            opcao.style.background = "#dc3545";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #b02a37";
+
+                            opcoes.forEach(item => {
+                                const letra = item.innerText.trim().substring(0, 1);
+
+                                if (letra === corretas[index]) {
+                                    item.style.background = "#28a745";
+                                    item.style.color = "white";
+                                    item.style.border = "1px solid #1e7e34";
+                                }
+                            });
+
+                        }
+
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

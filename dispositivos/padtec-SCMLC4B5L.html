@@ -40,6 +40,7 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -49,44 +50,19 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="../index.html" class="nav-item nav-link">Início</a>
-            <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
-            <a href="../imagens.html" class="nav-item nav-link">Imagens</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipamentos</a>
-                <div class="dropdown-menu fade-down m-0">
-                    <a href="padtec-SPVL90.html" class="dropdown-item">SPVL-90</a>
-                    <a href="padtec-SSC10.html" class="dropdown-item">SSC-10</a>
-                    <a href="padtec-SPVJ4.html" class="dropdown-item">SPVJ-4</a>
-                    <a href="padtec-SPVL4.html" class="dropdown-item">Supervisor SPVL-4</a>
-                    <a href="padtec-SPVL4SM.html" class="dropdown-item">Supervisor SPVL-4SM</a>
-                    <a href="padtec-SCMD3S1.html" class="dropdown-item active">SCMD3S1</a>
-                    <a href="padtec-fangr.html" class="dropdown-item active">FAN GR</a>
-                    <a href="padtec-loac.html" class="dropdown-item active">LOAC</a>
-                    <a href="padtec-mddc.html" class="dropdown-item active">MDDC</a>
-                    <a href="padtec-mpm.html" class="dropdown-item active">MPM</a>
-                    <a href="padtec-mRC05.html" class="dropdown-item active">mRC05</a>
-                    <a href="padtec-mvd.html" class="dropdown-item active">MVD</a>
-                    <a href="padtec-DCM17001.html" class="dropdown-item active">DCM17001</a>
-                    <a href="padtec-SCMT4B5L.html" class="dropdown-item active">SCMT 4B5L</a>
-                    <a href="padtec-T25DC21.html" class="dropdown-item active">T25DC21</a>
-                    <a href="padtec-T25DC25.html" class="dropdown-item active">T25DC25</a>
-                    <a href="padtec-T25DC26.html" class="dropdown-item active">T25DC26</a>
-                    <a href="padtec-T25DC30.html" class="dropdown-item active">T25DC30</a>
-                    <a href="padtec-T25DC34.html" class="dropdown-item active">T25DC34</a>
-                    <a href="padtec-T25DC35.html" class="dropdown-item active">T25DC35</a>
-                    <a href="TCX12-4D-A0.html" class="dropdown-item active">TCX12-4D-A0</a>
-                    <a href="padtec-SCMC4B5L.html" class="dropdown-item active">SCMC 4B5L</a>
-                    <a href="padtec-ops2.html" class="dropdown-item active">OPS2-4AA</a>
-                    <a href="padtec-ops5.html" class="dropdown-item active">OPS59D1</a>
-                    <a href="padtec-s5248.html" class="dropdown-item active">S5248</a>
-                    <a href="padtech-TC100DC2142GT8.html" class="dropdown-item active">TC100DC2142GT8</a>
-                    <a href="padtec-VOAB2A16AA.html" class="dropdown-item active">VOAB2A16AA</a>
-                    <a href="padtec-ROAC281SAH.html" class="dropdown-item active">padtec-ROAC281SAH</a>
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+                <a href="../index.html" class="nav-item nav-link active">Início</a>
+                <a href="../sobre_nos.html" class="nav-item nav-link">Sobre nós</a>
+                <a href="../equipamentos.html" class="nav-item nav-link">Equipamentos</a>
+
+                <div class="nav-item dropdown">
+                    <div class="dropdown-menu fade-down m-0">
+            
+                    </div>
                 </div>
-            </div>
-            <a href="../contato.html" class="nav-item nav-link">Contato</a>
+
+                <a href="../contato.html" class="nav-item nav-link">Contato</a>
         </div>
     </div>
 </nav>
@@ -247,7 +223,7 @@
 <section class="mb-5">
     <h2>Mini questionário</h2>
 
-    <div class="card p-4">
+        <div class="card p-4" id="questionario">
         <ol>
             <li class="mb-3">
                 Qual é a principal função do SCMLC-4B5L?
@@ -281,6 +257,53 @@
         <small>R&L Techroom — ETEC Takashi Morita</small>
     </div>
 </footer>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
 
+            const corretas = ["C", "B", "B"];
+
+            const questionario = document.getElementById("questionario");
+            const perguntas = questionario.querySelectorAll("ol > li");
+
+            perguntas.forEach((pergunta, index) => {
+                const opcoes = pergunta.querySelectorAll(".quiz-option");
+
+                opcoes.forEach(opcao => {
+                    opcao.addEventListener("click", () => {
+
+                        if (pergunta.classList.contains("respondida")) return;
+                        pergunta.classList.add("respondida");
+
+                        const letraSelecionada = opcao.innerText.trim().substring(0, 1);
+
+                        if (letraSelecionada === corretas[index]) {
+
+                            opcao.style.background = "#28a745";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #1e7e34";
+
+                        } else {
+
+                            opcao.style.background = "#dc3545";
+                            opcao.style.color = "white";
+                            opcao.style.border = "1px solid #b02a37";
+
+                            opcoes.forEach(item => {
+                                const letra = item.innerText.trim().substring(0, 1);
+
+                                if (letra === corretas[index]) {
+                                    item.style.background = "#28a745";
+                                    item.style.color = "white";
+                                    item.style.border = "1px solid #1e7e34";
+                                }
+                            });
+
+                        }
+
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
